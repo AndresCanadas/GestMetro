@@ -1,0 +1,5 @@
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\LibreriaMetro\LibreriaMetro\bin\Debug\LibreriaMetro.dll
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\LibreriaMetro\LibreriaMetro\bin\Debug\LibreriaMetro.pdb
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\LibreriaMetro\LibreriaMetro\obj\Debug\LibreriaMetro.csproj.CoreCompileInputs.cache
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\LibreriaMetro\LibreriaMetro\obj\Debug\LibreriaMetro.dll
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\LibreriaMetro\LibreriaMetro\obj\Debug\LibreriaMetro.pdb
