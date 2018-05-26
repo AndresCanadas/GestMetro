@@ -1,0 +1,12 @@
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\bin\Debug\Metro.mdf
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\bin\Debug\Metro_log.ldf
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\bin\Debug\GestionMetroc.exe.config
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\bin\Debug\GestionMetroc.exe
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\bin\Debug\GestionMetroc.pdb
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csprojAssemblyReference.cache
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Form1.resources
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Properties.Resources.resources
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csproj.GenerateResource.cache
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csproj.CoreCompileInputs.cache
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.exe
+F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.pdb
