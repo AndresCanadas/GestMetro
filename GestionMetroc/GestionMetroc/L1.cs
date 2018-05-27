@@ -16,5 +16,10 @@ namespace GestionMetroc
         {
             InitializeComponent();
         }
+
+        private void L1_Load(object sender, EventArgs e)
+        {
+            // HOLA
+        }
     }
 }
