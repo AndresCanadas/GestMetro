@@ -10,3 +10,21 @@ F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc
 F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csproj.CoreCompileInputs.cache
 F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.exe
 F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.pdb
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csprojResolveAssemblyReference.cache
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Main.resources
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Properties.Resources.resources
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csproj.GenerateResource.cache
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csproj.CoreCompileInputs.cache
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.exe
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.pdb
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\Metro.mdf
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\Metro_log.ldf
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\GestionMetroc.exe.config
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\GestionMetroc.exe
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\GestionMetroc.pdb
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\LibreriaMetro.dll
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\LibreriaMetro.pdb
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csproj.CopyComplete
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Prueba.resources
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Conductores.resources
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.PantallaPrincipal.resources

@@ -16,7 +16,7 @@ namespace GestionMetroc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Mostrar());
+            Application.Run(new PantallaPrincipal());
         }
     }
 }

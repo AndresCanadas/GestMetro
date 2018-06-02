@@ -63,41 +63,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="L1.cs">
+    <Compile Include="Conductores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="L1.Designer.cs">
-      <DependentUpon>L1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="L2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="L2.Designer.cs">
-      <DependentUpon>L2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="L3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="L3.Designer.cs">
-      <DependentUpon>L3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="L4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="L4.Designer.cs">
-      <DependentUpon>L4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="L5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="L5.Designer.cs">
-      <DependentUpon>L5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="L6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="L6.Designer.cs">
-      <DependentUpon>L6.cs</DependentUpon>
+    <Compile Include="Conductores.Designer.cs">
+      <DependentUpon>Conductores.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -105,19 +75,36 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="mostrar.cs">
+    <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mostrar.Designer.cs">
-      <DependentUpon>mostrar.cs</DependentUpon>
+    <Compile Include="PantallaPrincipal.Designer.cs">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="L1.resx">
-      <DependentUpon>L1.cs</DependentUpon>
+    <Compile Include="Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relaciones.cs">
+      <DependentUpon>Relaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Relaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Relaciones.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Conductores.resx">
+      <DependentUpon>Conductores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,6 +115,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -137,6 +127,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Relaciones.xsc">
+      <DependentUpon>Relaciones.xsd</DependentUpon>
+    </None>
+    <None Include="Relaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Relaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Relaciones.xss">
+      <DependentUpon>Relaciones.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
