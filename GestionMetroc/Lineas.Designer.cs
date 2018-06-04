@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lineasDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lineasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.relaciones = new GestionMetroc.Relaciones();
             this.lBorrar = new System.Windows.Forms.Label();
             this.bModificar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
@@ -39,10 +43,6 @@
             this.bBuscar = new System.Windows.Forms.Button();
             this.bContar = new System.Windows.Forms.Button();
             this.bBuscarNombre = new System.Windows.Forms.Button();
-            this.lineasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.relaciones = new GestionMetroc.Relaciones();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lineasTableAdapter = new GestionMetroc.RelacionesTableAdapters.LineasTableAdapter();
             this.tableAdapterManager = new GestionMetroc.RelacionesTableAdapters.TableAdapterManager();
             this.lineasTableAdapter1 = new GestionMetroc.RelacionesTableAdapters.LineasTableAdapter();
@@ -73,6 +73,28 @@
             this.lineasDataGridView.Name = "lineasDataGridView";
             this.lineasDataGridView.Size = new System.Drawing.Size(243, 246);
             this.lineasDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // lineasBindingSource
+            // 
+            this.lineasBindingSource.DataMember = "Lineas";
+            this.lineasBindingSource.DataSource = this.relaciones;
+            // 
+            // relaciones
+            // 
+            this.relaciones.DataSetName = "Relaciones";
+            this.relaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lBorrar
             // 
@@ -140,7 +162,7 @@
             // 
             // bBuscar
             // 
-            this.bBuscar.Location = new System.Drawing.Point(367, 217);
+            this.bBuscar.Location = new System.Drawing.Point(311, 217);
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(75, 23);
             this.bBuscar.TabIndex = 93;
@@ -170,28 +192,6 @@
             this.bBuscarNombre.Text = "Buscar por nombre";
             this.bBuscarNombre.UseVisualStyleBackColor = true;
             this.bBuscarNombre.Click += new System.EventHandler(this.bBuscarNombre_Click);
-            // 
-            // lineasBindingSource
-            // 
-            this.lineasBindingSource.DataMember = "Lineas";
-            this.lineasBindingSource.DataSource = this.relaciones;
-            // 
-            // relaciones
-            // 
-            this.relaciones.DataSetName = "Relaciones";
-            this.relaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // lineasTableAdapter
             // 
@@ -242,7 +242,7 @@
             // 
             // bBorrar2
             // 
-            this.bBorrar2.Location = new System.Drawing.Point(309, 217);
+            this.bBorrar2.Location = new System.Drawing.Point(311, 217);
             this.bBorrar2.Name = "bBorrar2";
             this.bBorrar2.Size = new System.Drawing.Size(75, 23);
             this.bBorrar2.TabIndex = 108;

@@ -111,6 +111,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nominas.Designer.cs">
+      <DependentUpon>Nominas.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Relaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tecnicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tecnicos.Designer.cs">
+      <DependentUpon>Tecnicos.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Conductores.resx">
       <DependentUpon>Conductores.cs</DependentUpon>
@@ -151,6 +163,9 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Nominas.resx">
+      <DependentUpon>Nominas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,7 +177,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tecnicos.resx">
+      <DependentUpon>Tecnicos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -195,6 +214,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Metro.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\tituloEd.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

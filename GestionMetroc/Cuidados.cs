@@ -60,9 +60,7 @@ namespace GestionMetroc
             bBuscarMatricula.Visible = false;
             bBuscarTecnico.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
-            bModificar.Visible = false;
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
@@ -73,7 +71,9 @@ namespace GestionMetroc
         private void bAgregar2_Click(object sender, EventArgs e)
         {
             RelacionesTableAdapters.CuidadosTableAdapter c = new RelacionesTableAdapters.CuidadosTableAdapter();
-            c.AgregarCuidado(idTextBox.Text, fechaEntradaDateTimePicker.ToString(),horaEntradaTextBox.Text, fechaSalidaDateTimePicker.ToString(),horaSalidaLabel.Text, matriculaTrenTextBox.Text, tipoAtencionTextBox.Text, dniTecnicoTextBox.Text, caracteristicasTextBox.Text, valoracionTextBox.Text);
+            var fechaSalida = fechaSalidaDateTimePicker.Value.ToShortDateString();
+            var fechaEntrada= fechaEntradaDateTimePicker.Value.ToShortDateString();
+            c.AgregarCuidado(idTextBox.Text, fechaEntrada,horaEntradaTextBox.Text, fechaSalida,horaSalidaTextBox.Text, matriculaTrenTextBox.Text, tipoAtencionTextBox.Text, dniTecnicoTextBox.Text, caracteristicasTextBox.Text, valoracionTextBox.Text);
             botones();
         }
 
@@ -105,14 +105,13 @@ namespace GestionMetroc
             bBuscar.Visible = false;
             lTecnico.Visible = false;
             lBorrar.Visible = false;
-            bModificar2.Visible = false;
 
             bBuscarMatricula.Visible = true;
             bBuscarTecnico.Visible = true;
             bContar.Visible = true;
-            bBorrar.Visible = true;
             bAgregar.Visible = true;
-            bModificar.Visible = true;
+
+            this.cuidadosTableAdapter.Fill(this.relaciones.Cuidados);
         }
 
         private void bBorrar_Click_1(object sender, EventArgs e)
@@ -124,9 +123,7 @@ namespace GestionMetroc
             bBuscar.Visible = true;
             bBuscarTecnico.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
-            bModificar.Visible = false;
             lBorrar.Visible = true;
             bCancelar.Visible = true;
         }
@@ -147,9 +144,7 @@ namespace GestionMetroc
             bBuscar.Visible = true;
             bBuscarTecnico.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
-            bModificar.Visible = false;
             lBorrar.Visible = false;
             bCancelar.Visible = true;
         }
@@ -164,9 +159,7 @@ namespace GestionMetroc
 
             bBuscarTecnico.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
-            bModificar.Visible = false;
             lBorrar.Visible = false;
             bCancelar.Visible = true;
         }
@@ -178,9 +171,7 @@ namespace GestionMetroc
             bBuscarMatricula.Visible = true;
             bBuscarTecnico.Visible = true;
             bContar.Visible = true;
-            bBorrar.Visible = true;
             bAgregar.Visible = true;
-            bModificar.Visible = true;
             if (lTecnico.Visible == true)
             {
                 DataTable tabla = new DataTable();
@@ -227,21 +218,12 @@ namespace GestionMetroc
             caracteristicasTextBox.Visible = true;
 
             bCancelar.Visible = true;
-            bModificar2.Visible = true;
 
             bBuscarMatricula.Visible = false;
             bBuscarTecnico.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
-            bModificar.Visible = false;
         }
 
-        private void bModificar2_Click(object sender, EventArgs e)
-        {
-            RelacionesTableAdapters.CuidadosTableAdapter c = new RelacionesTableAdapters.CuidadosTableAdapter();
-            c.ModificarCuidado(fechaEntradaDateTimePicker.ToString(), horaEntradaTextBox.Text, fechaSalidaDateTimePicker.ToString(), horaSalidaLabel.Text, matriculaTrenTextBox.Text, tipoAtencionTextBox.Text, dniTecnicoTextBox.Text, caracteristicasTextBox.Text, valoracionTextBox.Text, idTextBox.Text);
-            botones();
-        }
     }
 }

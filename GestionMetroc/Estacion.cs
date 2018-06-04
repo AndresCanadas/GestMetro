@@ -160,6 +160,8 @@ namespace GestionMetroc
             bCancelar.Visible = false;
             bModificar2.Visible = false;
 
+            this.estacionTableAdapter.Fill(this.relaciones.Estacion);
+
 
         }
 

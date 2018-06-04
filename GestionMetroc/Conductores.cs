@@ -209,12 +209,17 @@ namespace GestionMetroc
             fechaTitulacionDateTimePicker.Visible = false;
             bModificar2.Visible = false;
             lBorrar.Visible = false;
+
+            this.conductoresTableAdapter.Fill(this.relaciones.Conductores);
         }
 
         private void bAgregar2_Click(object sender, EventArgs e)
         {
             RelacionesTableAdapters.ConductoresTableAdapter c = new RelacionesTableAdapters.ConductoresTableAdapter();
-            c.AgregarConductor(dniTextBox.Text, nombreTextBox.Text, apellidosTextBox.Text, direccionTextBox.Text, Convert.ToInt32(telefonoTextBox.Text), emailTextBox.Text, fechaIngresoDateTimePicker.ToString(),fechaNacimientoDateTimePicker.ToString(),nombreEstudioTextBox.Text, fechaTitulacionDateTimePicker.ToString(), centroTitulacionTextBox.Text);
+            var fechaIngreso = fechaIngresoDateTimePicker.Value.ToShortDateString();
+            var fechaNacimiento = fechaNacimientoDateTimePicker.Value.ToShortDateString();
+            var fechaTitulacion = fechaTitulacionDateTimePicker.Value.ToShortDateString();
+            c.AgregarConductor(dniTextBox.Text, nombreTextBox.Text, apellidosTextBox.Text, direccionTextBox.Text, Convert.ToInt32(telefonoTextBox.Text), emailTextBox.Text, fechaIngreso,fechaNacimiento,nombreEstudioTextBox.Text, fechaTitulacion, centroTitulacionTextBox.Text);
             botones();
         }
 
@@ -257,7 +262,10 @@ namespace GestionMetroc
         private void bModificar2_Click(object sender, EventArgs e)
         {
             RelacionesTableAdapters.ConductoresTableAdapter c = new RelacionesTableAdapters.ConductoresTableAdapter();
-            c.ModificarConductor(nombreTextBox.Text, apellidosTextBox.Text, direccionTextBox.Text, Convert.ToInt32(telefonoTextBox.Text), emailTextBox.Text, fechaIngresoDateTimePicker.ToString(), fechaNacimientoDateTimePicker.ToString(), nombreEstudioTextBox.Text, fechaTitulacionDateTimePicker.ToString(), centroTitulacionTextBox.Text, dniTextBox.Text, dniTextBox.Text);
+            var fechaIngreso = fechaIngresoDateTimePicker.Value.ToShortDateString();
+            var fechaNacimiento = fechaNacimientoDateTimePicker.Value.ToShortDateString();
+            var fechaTitulacion = fechaTitulacionDateTimePicker.Value.ToShortDateString();
+            c.ModificarConductor(nombreTextBox.Text, apellidosTextBox.Text, direccionTextBox.Text, Convert.ToInt32(telefonoTextBox.Text), emailTextBox.Text, fechaIngreso, fechaNacimiento, nombreEstudioTextBox.Text, fechaTitulacion, centroTitulacionTextBox.Text, dniTextBox.Text, dniTextBox.Text);
             botones();
         }
     }

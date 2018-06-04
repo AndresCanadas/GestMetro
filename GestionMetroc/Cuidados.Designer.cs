@@ -30,10 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cuidadosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuidadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.relaciones = new GestionMetroc.Relaciones();
             this.lBorrar = new System.Windows.Forms.Label();
-            this.bModificar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
-            this.bBorrar = new System.Windows.Forms.Button();
             this.lTecnico = new System.Windows.Forms.Label();
             this.lMatricula = new System.Windows.Forms.Label();
             this.tbBusqueda = new System.Windows.Forms.TextBox();
@@ -63,22 +73,9 @@
             this.valoracionTextBox = new System.Windows.Forms.TextBox();
             this.bCancelar = new System.Windows.Forms.Button();
             this.bAgregar2 = new System.Windows.Forms.Button();
-            this.cuidadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.relaciones = new GestionMetroc.Relaciones();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cuidadosTableAdapter = new GestionMetroc.RelacionesTableAdapters.CuidadosTableAdapter();
             this.tableAdapterManager = new GestionMetroc.RelacionesTableAdapters.TableAdapterManager();
             this.cuidadosTableAdapter1 = new GestionMetroc.RelacionesTableAdapters.CuidadosTableAdapter();
-            this.bModificar2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cuidadosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cuidadosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.relaciones)).BeginInit();
@@ -105,6 +102,76 @@
             this.cuidadosDataGridView.Size = new System.Drawing.Size(1051, 278);
             this.cuidadosDataGridView.TabIndex = 1;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "FechaEntrada";
+            this.dataGridViewTextBoxColumn2.HeaderText = "FechaEntrada";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "HoraEntrada";
+            this.dataGridViewTextBoxColumn3.HeaderText = "HoraEntrada";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "FechaSalida";
+            this.dataGridViewTextBoxColumn4.HeaderText = "FechaSalida";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "HoraSalida";
+            this.dataGridViewTextBoxColumn5.HeaderText = "HoraSalida";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "MatriculaTren";
+            this.dataGridViewTextBoxColumn6.HeaderText = "MatriculaTren";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "TipoAtencion";
+            this.dataGridViewTextBoxColumn7.HeaderText = "TipoAtencion";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "DniTecnico";
+            this.dataGridViewTextBoxColumn8.HeaderText = "DniTecnico";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Caracteristicas";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Caracteristicas";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Valoracion";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Valoracion";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // cuidadosBindingSource
+            // 
+            this.cuidadosBindingSource.DataMember = "Cuidados";
+            this.cuidadosBindingSource.DataSource = this.relaciones;
+            // 
+            // relaciones
+            // 
+            this.relaciones.DataSetName = "Relaciones";
+            this.relaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lBorrar
             // 
             this.lBorrar.AutoSize = true;
@@ -116,38 +183,16 @@
             this.lBorrar.Text = "Borrar por ID";
             this.lBorrar.Visible = false;
             // 
-            // bModificar
-            // 
-            this.bModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bModificar.Location = new System.Drawing.Point(827, 25);
-            this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(107, 53);
-            this.bModificar.TabIndex = 44;
-            this.bModificar.Text = "Modificar";
-            this.bModificar.UseVisualStyleBackColor = true;
-            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
-            // 
             // bAgregar
             // 
             this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAgregar.Location = new System.Drawing.Point(703, 25);
+            this.bAgregar.Location = new System.Drawing.Point(709, 32);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(107, 53);
             this.bAgregar.TabIndex = 43;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
-            // 
-            // bBorrar
-            // 
-            this.bBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBorrar.Location = new System.Drawing.Point(579, 25);
-            this.bBorrar.Name = "bBorrar";
-            this.bBorrar.Size = new System.Drawing.Size(107, 53);
-            this.bBorrar.TabIndex = 42;
-            this.bBorrar.Text = "Borrar";
-            this.bBorrar.UseVisualStyleBackColor = true;
-            this.bBorrar.Click += new System.EventHandler(this.bBorrar_Click_1);
             // 
             // lTecnico
             // 
@@ -182,7 +227,7 @@
             // 
             // bBuscar
             // 
-            this.bBuscar.Location = new System.Drawing.Point(482, 320);
+            this.bBuscar.Location = new System.Drawing.Point(471, 320);
             this.bBuscar.Name = "bBuscar";
             this.bBuscar.Size = new System.Drawing.Size(75, 23);
             this.bBuscar.TabIndex = 38;
@@ -194,7 +239,7 @@
             // bContar
             // 
             this.bContar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bContar.Location = new System.Drawing.Point(450, 25);
+            this.bContar.Location = new System.Drawing.Point(586, 32);
             this.bContar.Name = "bContar";
             this.bContar.Size = new System.Drawing.Size(107, 53);
             this.bContar.TabIndex = 37;
@@ -205,7 +250,7 @@
             // bBuscarTecnico
             // 
             this.bBuscarTecnico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscarTecnico.Location = new System.Drawing.Point(326, 25);
+            this.bBuscarTecnico.Location = new System.Drawing.Point(462, 32);
             this.bBuscarTecnico.Name = "bBuscarTecnico";
             this.bBuscarTecnico.Size = new System.Drawing.Size(107, 53);
             this.bBuscarTecnico.TabIndex = 36;
@@ -216,7 +261,7 @@
             // bBuscarMatricula
             // 
             this.bBuscarMatricula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscarMatricula.Location = new System.Drawing.Point(202, 25);
+            this.bBuscarMatricula.Location = new System.Drawing.Point(338, 32);
             this.bBuscarMatricula.Name = "bBuscarMatricula";
             this.bBuscarMatricula.Size = new System.Drawing.Size(107, 53);
             this.bBuscarMatricula.TabIndex = 35;
@@ -427,7 +472,7 @@
             // 
             // bAgregar2
             // 
-            this.bAgregar2.Location = new System.Drawing.Point(482, 320);
+            this.bAgregar2.Location = new System.Drawing.Point(471, 320);
             this.bAgregar2.Name = "bAgregar2";
             this.bAgregar2.Size = new System.Drawing.Size(75, 23);
             this.bAgregar2.TabIndex = 66;
@@ -435,76 +480,6 @@
             this.bAgregar2.UseVisualStyleBackColor = true;
             this.bAgregar2.Visible = false;
             this.bAgregar2.Click += new System.EventHandler(this.bAgregar2_Click);
-            // 
-            // cuidadosBindingSource
-            // 
-            this.cuidadosBindingSource.DataMember = "Cuidados";
-            this.cuidadosBindingSource.DataSource = this.relaciones;
-            // 
-            // relaciones
-            // 
-            this.relaciones.DataSetName = "Relaciones";
-            this.relaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FechaEntrada";
-            this.dataGridViewTextBoxColumn2.HeaderText = "FechaEntrada";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "HoraEntrada";
-            this.dataGridViewTextBoxColumn3.HeaderText = "HoraEntrada";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "FechaSalida";
-            this.dataGridViewTextBoxColumn4.HeaderText = "FechaSalida";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "HoraSalida";
-            this.dataGridViewTextBoxColumn5.HeaderText = "HoraSalida";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "MatriculaTren";
-            this.dataGridViewTextBoxColumn6.HeaderText = "MatriculaTren";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "TipoAtencion";
-            this.dataGridViewTextBoxColumn7.HeaderText = "TipoAtencion";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "DniTecnico";
-            this.dataGridViewTextBoxColumn8.HeaderText = "DniTecnico";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Caracteristicas";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Caracteristicas";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Valoracion";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Valoracion";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // cuidadosTableAdapter
             // 
@@ -531,23 +506,11 @@
             // 
             this.cuidadosTableAdapter1.ClearBeforeFill = true;
             // 
-            // bModificar2
-            // 
-            this.bModificar2.Location = new System.Drawing.Point(482, 320);
-            this.bModificar2.Name = "bModificar2";
-            this.bModificar2.Size = new System.Drawing.Size(75, 23);
-            this.bModificar2.TabIndex = 67;
-            this.bModificar2.Text = "Modificar";
-            this.bModificar2.UseVisualStyleBackColor = true;
-            this.bModificar2.Visible = false;
-            this.bModificar2.Click += new System.EventHandler(this.bModificar2_Click);
-            // 
             // Cuidados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 687);
-            this.Controls.Add(this.bModificar2);
             this.Controls.Add(this.bAgregar2);
             this.Controls.Add(this.bCancelar);
             this.Controls.Add(this.idLabel);
@@ -571,9 +534,7 @@
             this.Controls.Add(this.valoracionLabel);
             this.Controls.Add(this.valoracionTextBox);
             this.Controls.Add(this.lBorrar);
-            this.Controls.Add(this.bModificar);
             this.Controls.Add(this.bAgregar);
-            this.Controls.Add(this.bBorrar);
             this.Controls.Add(this.lTecnico);
             this.Controls.Add(this.lMatricula);
             this.Controls.Add(this.tbBusqueda);
@@ -612,9 +573,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private RelacionesTableAdapters.CuidadosTableAdapter cuidadosTableAdapter1;
         private System.Windows.Forms.Label lBorrar;
-        private System.Windows.Forms.Button bModificar;
         private System.Windows.Forms.Button bAgregar;
-        private System.Windows.Forms.Button bBorrar;
         private System.Windows.Forms.Label lTecnico;
         private System.Windows.Forms.Label lMatricula;
         private System.Windows.Forms.TextBox tbBusqueda;
@@ -644,6 +603,5 @@
         private System.Windows.Forms.Label caracteristicasLabel;
         private System.Windows.Forms.Button bCancelar;
         private System.Windows.Forms.Button bAgregar2;
-        private System.Windows.Forms.Button bModificar2;
     }
 }

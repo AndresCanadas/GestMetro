@@ -58,5 +58,47 @@ namespace GestionMetroc
             Form Jefe = new JefeEstacion();
             Jefe.Show();
         }
+
+        private void bNominas_Click(object sender, EventArgs e)
+        {
+            Form Nominas = new Nominas();
+            Nominas.Show();
+        }
+
+        private void bTecnicos_Click(object sender, EventArgs e)
+        {
+            Form Tecnicos = new Tecnicos();
+            Tecnicos.Show();
+        }
+
+        private void bEntrar_Click(object sender, EventArgs e)
+        {
+            if (tbUsuario.Text.Equals("admin") && tbPass.Text.Equals("admin"))
+            {
+                MessageBox.Show("Bienvenido");
+                bConductores.Visible = true;
+                bJefeEstacion.Visible = true;
+                bCuidados.Visible = true;
+                bEstacion.Visible = true;
+                bHangar.Visible = true;
+                bIncidencias.Visible = true;
+                bLineas.Visible = true;
+                bNominas.Visible = true;
+                bTecnicos.Visible = true;
+                bTornos.Visible = true;
+                bTrenes.Visible = true;
+                bVagones.Visible = true;
+
+                lUsuario.Visible = false;
+                lPass.Visible = false;
+                tbPass.Visible = false;
+                tbUsuario.Visible = false;
+                bEntrar.Visible = false;
+                pbTitulo.Visible = false;
+            }
+            else {
+                MessageBox.Show("Usuario o contraseña incorrectos");
+            }
+        }
     }
 }

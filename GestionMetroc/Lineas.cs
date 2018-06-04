@@ -43,6 +43,7 @@ namespace GestionMetroc
             bAgregar.Visible = false;
             bModificar.Visible = false;
             lBorrar.Visible = false;
+            bCancelar.Visible = true;
         }
 
         private void bContar_Click(object sender, EventArgs e)
@@ -66,6 +67,7 @@ namespace GestionMetroc
             bBorrar2.Visible = false;
             bCancelar.Visible = true;
             bBorrar2.Visible = true;
+            bCancelar.Visible = true;
         }
 
         private void bBuscar_Click(object sender, EventArgs e)
@@ -77,6 +79,7 @@ namespace GestionMetroc
             bBorrar.Visible = true;
             bAgregar.Visible = true;
             bModificar.Visible = true;
+            bCancelar.Visible = true;
 
             if (lNombre.Visible == true)
             {
@@ -88,6 +91,7 @@ namespace GestionMetroc
             }
             lNombre.Visible = false;
             lBorrar.Visible = false;
+            botones();
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
@@ -121,7 +125,7 @@ namespace GestionMetroc
             idTextBox.Visible = false;
             nombreTextBox.Visible = false;
             bBuscarNombre.Visible = true;
-            bBuscar.Visible = true;
+            bBuscar.Visible = false;
             bContar.Visible = true;
             bBorrar.Visible = true;
             bAgregar.Visible = true;
@@ -130,6 +134,10 @@ namespace GestionMetroc
 
         private void bCancelar_Click(object sender, EventArgs e)
         {
+            botones();
+        }
+
+        public void botones() {
             bAgregar2.Visible = false;
             idLabel.Visible = false;
             nombreLabel.Visible = false;
@@ -150,6 +158,10 @@ namespace GestionMetroc
             tbNombreNuevo.Visible = false;
             lNuevoNombre.Visible = false;
             bModificar2.Visible = false;
+            lNombre.Visible = false;
+            bBuscar.Visible = false;
+            bCancelar.Visible = false;
+            this.lineasTableAdapter.Fill(this.relaciones.Lineas);
         }
 
         private void bBorrar2_Click(object sender, EventArgs e)
@@ -157,16 +169,7 @@ namespace GestionMetroc
             RelacionesTableAdapters.LineasTableAdapter j = new RelacionesTableAdapters.LineasTableAdapter();
             String b = tbBusqueda.Text;
             j.BorrarLinea(b);
-
-            bBuscarNombre.Visible = true;
-            tbBusqueda.Visible = false;
-            bBuscar.Visible = false;
-            bContar.Visible = true;
-            bBorrar.Visible = true;
-            bAgregar.Visible = true;
-            bModificar.Visible = true;
-            lNombre.Visible = false;
-            lBorrar.Visible = false;
+            botones();
 
         }
 
@@ -202,6 +205,7 @@ namespace GestionMetroc
             bCancelar.Visible = false;
             bModificar2.Visible = false;
             idLabel.Visible = false;
+            botones();
 
         }
     }

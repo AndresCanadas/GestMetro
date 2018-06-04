@@ -41,9 +41,9 @@ namespace GestionMetroc
             bBuscar.Visible = true;
             bBuscarJefe.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
             lBorrar.Visible = false;
+            bCancelar.Visible = true;
         }
 
         private void bBuscarJefe_Click(object sender, EventArgs e)
@@ -55,9 +55,9 @@ namespace GestionMetroc
             bBuscar.Visible = true;
             bBuscarJefe.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
             lBorrar.Visible = false;
+            bCancelar.Visible = true;
         }
 
         private void bContar_Click_1(object sender, EventArgs e)
@@ -72,13 +72,11 @@ namespace GestionMetroc
             bBuscarEstacion.Visible = false;
             lEstacion.Visible = false;
             tbBusqueda.Visible = true;
-            bBorrar2.Visible = true;
             lBorrar.Visible = true;
             lJefe.Visible = false;
             
             bBuscarJefe.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
             
             bCancelar.Visible = true;
@@ -91,7 +89,6 @@ namespace GestionMetroc
             bBuscar.Visible = false;
             bBuscarJefe.Visible = true;
             bContar.Visible = true;
-            bBorrar.Visible = true;
             bAgregar.Visible = true;
             if (lJefe.Visible == true)
             {
@@ -113,6 +110,7 @@ namespace GestionMetroc
             lJefe.Visible = false;
             lEstacion.Visible = false;
             lBorrar.Visible = false;
+            botones();
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
@@ -136,25 +134,24 @@ namespace GestionMetroc
             bBuscarEstacion.Visible = false;
             bBuscarJefe.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
-        }
-
-        private void bBorrar2_Click(object sender, EventArgs e)
-        {
-            RelacionesTableAdapters.IncidenciasTableAdapter i = new RelacionesTableAdapters.IncidenciasTableAdapter();
-            int b = Convert.ToInt32(tbBusqueda.Text);
-            i.BorrarIncidencia(b);
         }
 
         private void bAgregar2_Click(object sender, EventArgs e)
         {
             RelacionesTableAdapters.IncidenciasTableAdapter i = new RelacionesTableAdapters.IncidenciasTableAdapter();
-            i.AgregarIncidencia(Convert.ToInt32(idTextBox.Text), fechaDateTimePicker.ToString(), horaTextBox.Text, nombreEstacionTextBox.Text, caracteristicasTextBox.Text, valoracionTextBox.Text, dniJefeTextBox.Text);
+            var fecha = fechaDateTimePicker.Value.ToShortDateString();
+            i.AgregarIncidencia(Convert.ToInt32(idTextBox.Text), fecha, horaTextBox.Text, nombreEstacionTextBox.Text, caracteristicasTextBox.Text, valoracionTextBox.Text, dniJefeTextBox.Text);
+            botones();
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
         {
+            botones();
+
+        }
+
+        public void botones() {
             idTextBox.Visible = false;
             fechaDateTimePicker.Visible = false;
             horaTextBox.Visible = false;
@@ -174,12 +171,14 @@ namespace GestionMetroc
             bBuscarEstacion.Visible = true;
             bBuscarJefe.Visible = true;
             bContar.Visible = true;
-            bBorrar.Visible = true;
             bAgregar.Visible = true;
             tbBusqueda.Visible = false;
             tbBusqueda.Visible = false;
-            bBorrar2.Visible = false;
             lBorrar.Visible = false;
+            lEstacion.Visible = false;
+            bBuscar.Visible = false;
+            lJefe.Visible = false;
+            this.incidenciasTableAdapter.Fill(this.relaciones.Incidencias);
         }
     }
 }

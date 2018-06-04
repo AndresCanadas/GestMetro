@@ -4,6 +4,13 @@
 
     partial class Relaciones
     {
+        partial class CuidadosDataTable
+        {
+        }
+
+        partial class IncidenciasDataTable
+        {
+        }
     }
 }
 

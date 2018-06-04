@@ -157,6 +157,7 @@ namespace GestionMetroc
             lEstacion.Visible = false;
             bBorrar2.Visible = false;
             lBorrar.Visible = false;
+            this.jefeEstacionTableAdapter.Fill(this.relaciones.JefeEstacion);
 
 
         }
@@ -189,7 +190,8 @@ namespace GestionMetroc
         private void bAgregar2_Click(object sender, EventArgs e)
         {
             RelacionesTableAdapters.JefeEstacionTableAdapter j = new RelacionesTableAdapters.JefeEstacionTableAdapter();
-            j.AgregarJefe(dniTextBox.Text, nombreTextBox.Text, apellidosTextBox.Text, estacionTextBox.Text, fechaEntradaDateTimePicker.ToString());
+            var fechaEntrada = fechaEntradaDateTimePicker.Value.ToShortDateString();
+            j.AgregarJefe(dniTextBox.Text, nombreTextBox.Text, apellidosTextBox.Text, estacionTextBox.Text, fechaEntrada);
             botones();
         }
 
@@ -220,7 +222,8 @@ namespace GestionMetroc
         private void bModificar2_Click(object sender, EventArgs e)
         {
             RelacionesTableAdapters.JefeEstacionTableAdapter j = new RelacionesTableAdapters.JefeEstacionTableAdapter();
-            j.ModificarJefe(nombreTextBox.Text, apellidosTextBox.Text, estacionTextBox.Text, fechaEntradaDateTimePicker.ToString(), dniTextBox.Text);
+            var fechaEntrada = fechaEntradaDateTimePicker.Value.ToShortDateString();
+            j.ModificarJefe(nombreTextBox.Text, apellidosTextBox.Text, estacionTextBox.Text, fechaEntrada, dniTextBox.Text);
             botones();
         }
 

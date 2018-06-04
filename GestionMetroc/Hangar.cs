@@ -160,6 +160,7 @@ namespace GestionMetroc
             matriculaTrenTextBox.Visible = false;
             bAgregar2.Visible = false;
             bModificar2.Visible = false;
+            this.hangarTableAdapter.Fill(this.relaciones.Hangar);
         }
 
         private void bBorrar2_Click(object sender, EventArgs e)
@@ -203,7 +204,9 @@ namespace GestionMetroc
         private void bAgregar2_Click(object sender, EventArgs e)
         {
             RelacionesTableAdapters.HangarTableAdapter h = new RelacionesTableAdapters.HangarTableAdapter();
-            h.AgregarHangar(idTextBox.Text, dniConductorTextBox.Text, Convert.ToInt32(plazaTextBox.Text), fechaEntradaDateTimePicker.ToString(), horaEntradaTextBox.Text, fechaSalidaDateTimePicker.ToString(), horaSalidaTextBox.Text, matriculaTrenTextBox.Text);
+            var fechaSalida = fechaSalidaDateTimePicker.Value.ToShortDateString();
+            var fechaEntrada = fechaEntradaDateTimePicker.Value.ToShortDateString();
+            h.AgregarHangar(idTextBox.Text, dniConductorTextBox.Text, Convert.ToInt32(plazaTextBox.Text), fechaEntrada, horaEntradaTextBox.Text, fechaSalida, horaSalidaTextBox.Text, matriculaTrenTextBox.Text);
             botones();
         }
 
@@ -240,7 +243,9 @@ namespace GestionMetroc
         private void bModificar2_Click(object sender, EventArgs e)
         {
             RelacionesTableAdapters.HangarTableAdapter h = new RelacionesTableAdapters.HangarTableAdapter();
-            h.ModificarHangar(dniConductorTextBox.Text, Convert.ToInt32(plazaTextBox.Text), fechaEntradaDateTimePicker.ToString(), horaEntradaTextBox.Text, fechaSalidaDateTimePicker.ToString(), horaSalidaTextBox.Text, matriculaTrenTextBox.Text, idTextBox.Text);
+            var fechaSalida = fechaSalidaDateTimePicker.Value.ToShortDateString();
+            var fechaEntrada = fechaEntradaDateTimePicker.Value.ToShortDateString();
+            h.ModificarHangar(dniConductorTextBox.Text, Convert.ToInt32(plazaTextBox.Text), fechaEntrada, horaEntradaTextBox.Text, fechaSalida, horaSalidaTextBox.Text, matriculaTrenTextBox.Text, idTextBox.Text);
             botones();
         }
     }

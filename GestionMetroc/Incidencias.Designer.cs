@@ -41,7 +41,6 @@
             this.relaciones = new GestionMetroc.Relaciones();
             this.lBorrar = new System.Windows.Forms.Label();
             this.bAgregar = new System.Windows.Forms.Button();
-            this.bBorrar = new System.Windows.Forms.Button();
             this.lJefe = new System.Windows.Forms.Label();
             this.lEstacion = new System.Windows.Forms.Label();
             this.tbBusqueda = new System.Windows.Forms.TextBox();
@@ -52,7 +51,6 @@
             this.incidenciasTableAdapter = new GestionMetroc.RelacionesTableAdapters.IncidenciasTableAdapter();
             this.incidenciasTableAdapter1 = new GestionMetroc.RelacionesTableAdapters.IncidenciasTableAdapter();
             this.tableAdapterManager = new GestionMetroc.RelacionesTableAdapters.TableAdapterManager();
-            this.bBorrar2 = new System.Windows.Forms.Button();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.horaTextBox = new System.Windows.Forms.TextBox();
@@ -158,24 +156,13 @@
             // bAgregar
             // 
             this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAgregar.Location = new System.Drawing.Point(611, 12);
+            this.bAgregar.Location = new System.Drawing.Point(560, 12);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(107, 53);
             this.bAgregar.TabIndex = 54;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
-            // 
-            // bBorrar
-            // 
-            this.bBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBorrar.Location = new System.Drawing.Point(487, 12);
-            this.bBorrar.Name = "bBorrar";
-            this.bBorrar.Size = new System.Drawing.Size(107, 53);
-            this.bBorrar.TabIndex = 53;
-            this.bBorrar.Text = "Borrar";
-            this.bBorrar.UseVisualStyleBackColor = true;
-            this.bBorrar.Click += new System.EventHandler(this.bBorrar_Click_1);
             // 
             // lJefe
             // 
@@ -222,7 +209,7 @@
             // bContar
             // 
             this.bContar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bContar.Location = new System.Drawing.Point(363, 12);
+            this.bContar.Location = new System.Drawing.Point(429, 12);
             this.bContar.Name = "bContar";
             this.bContar.Size = new System.Drawing.Size(107, 53);
             this.bContar.TabIndex = 48;
@@ -233,7 +220,7 @@
             // bBuscarJefe
             // 
             this.bBuscarJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscarJefe.Location = new System.Drawing.Point(239, 12);
+            this.bBuscarJefe.Location = new System.Drawing.Point(305, 12);
             this.bBuscarJefe.Name = "bBuscarJefe";
             this.bBuscarJefe.Size = new System.Drawing.Size(107, 53);
             this.bBuscarJefe.TabIndex = 47;
@@ -244,7 +231,7 @@
             // bBuscarEstacion
             // 
             this.bBuscarEstacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscarEstacion.Location = new System.Drawing.Point(115, 12);
+            this.bBuscarEstacion.Location = new System.Drawing.Point(181, 12);
             this.bBuscarEstacion.Name = "bBuscarEstacion";
             this.bBuscarEstacion.Size = new System.Drawing.Size(107, 53);
             this.bBuscarEstacion.TabIndex = 46;
@@ -277,17 +264,6 @@
             this.tableAdapterManager.TrenesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = GestionMetroc.RelacionesTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VagonesTableAdapter = null;
-            // 
-            // bBorrar2
-            // 
-            this.bBorrar2.Location = new System.Drawing.Point(342, 217);
-            this.bBorrar2.Name = "bBorrar2";
-            this.bBorrar2.Size = new System.Drawing.Size(75, 23);
-            this.bBorrar2.TabIndex = 57;
-            this.bBorrar2.Text = "Borrar";
-            this.bBorrar2.UseVisualStyleBackColor = true;
-            this.bBorrar2.Visible = false;
-            this.bBorrar2.Click += new System.EventHandler(this.bBorrar2_Click);
             // 
             // idTextBox
             // 
@@ -375,7 +351,7 @@
             // LabelHora
             // 
             this.LabelHora.AutoSize = true;
-            this.LabelHora.Location = new System.Drawing.Point(491, 106);
+            this.LabelHora.Location = new System.Drawing.Point(228, 78);
             this.LabelHora.Name = "LabelHora";
             this.LabelHora.Size = new System.Drawing.Size(33, 13);
             this.LabelHora.TabIndex = 73;
@@ -465,10 +441,8 @@
             this.Controls.Add(this.caracteristicasTextBox);
             this.Controls.Add(this.valoracionTextBox);
             this.Controls.Add(this.dniJefeTextBox);
-            this.Controls.Add(this.bBorrar2);
             this.Controls.Add(this.lBorrar);
             this.Controls.Add(this.bAgregar);
-            this.Controls.Add(this.bBorrar);
             this.Controls.Add(this.lJefe);
             this.Controls.Add(this.lEstacion);
             this.Controls.Add(this.tbBusqueda);
@@ -505,7 +479,6 @@
         private RelacionesTableAdapters.IncidenciasTableAdapter incidenciasTableAdapter1;
         private System.Windows.Forms.Label lBorrar;
         private System.Windows.Forms.Button bAgregar;
-        private System.Windows.Forms.Button bBorrar;
         private System.Windows.Forms.Label lJefe;
         private System.Windows.Forms.Label lEstacion;
         private System.Windows.Forms.TextBox tbBusqueda;
@@ -513,7 +486,6 @@
         private System.Windows.Forms.Button bContar;
         private System.Windows.Forms.Button bBuscarJefe;
         private System.Windows.Forms.Button bBuscarEstacion;
-        private System.Windows.Forms.Button bBorrar2;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
         private System.Windows.Forms.TextBox horaTextBox;
