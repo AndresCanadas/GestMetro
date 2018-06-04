@@ -45,6 +45,7 @@ namespace GestionMetroc
             bAgregar.Visible = false;
             bModificar.Visible = false;
             lBorrar.Visible = false;
+            bCancelar.Visible = true;
         }
 
         private void bBuscarLinea_Click(object sender, EventArgs e)
@@ -60,6 +61,7 @@ namespace GestionMetroc
             bAgregar.Visible = false;
             bModificar.Visible = false;
             lBorrar.Visible = false;
+            bCancelar.Visible = true;
         }
 
         private void bContar_Click_1(object sender, EventArgs e)
@@ -75,13 +77,14 @@ namespace GestionMetroc
             lConductor.Visible = false;
             tbBusqueda.Visible = true;
             lMatricula.Visible = false;
-            bBuscar.Visible = true;
             bBuscarMatricula.Visible = false;
             bContar.Visible = false;
             bBorrar.Visible = false;
             bAgregar.Visible = false;
             bModificar.Visible = false;
             lBorrar.Visible = true;
+            bCancelar.Visible = true;
+            bBorrar2.Visible = true;
         }
 
         private void bBuscar_Click_1(object sender, EventArgs e)
@@ -110,17 +113,135 @@ namespace GestionMetroc
                 tabla = h.BuscarDniConductor(b);
                 hangarDataGridView.DataSource = tabla;
             }
-            else if (lBorrar.Visible == true)
-            {
-                RelacionesTableAdapters.HangarTableAdapter h = new RelacionesTableAdapters.HangarTableAdapter();
-                String b = tbBusqueda.Text;
-                // c.BorrarConductor(b);
-                // this.cuidadosTableAdapter.Fill(this.relaciones.Cuidados);
-            }
 
             lMatricula.Visible = false;
             lConductor.Visible = false;
             lBorrar.Visible = false;
+        }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+
+            botones();
+        }
+
+        public void botones() {
+            bBuscarConductor.Visible = true;
+            bBuscarMatricula.Visible = true;
+            bContar.Visible = true;
+            bBorrar.Visible = true;
+            bAgregar.Visible = true;
+            bModificar.Visible = true;
+
+            lConductor.Visible = false;
+            tbBusqueda.Visible = false;
+            lMatricula.Visible = false;
+            bBuscar.Visible = false;
+            lBorrar.Visible = false;
+            bBorrar2.Visible = false;
+            bCancelar.Visible = false;
+
+            idLabel.Visible = false;
+            dniConductorLabel.Visible = false;
+            plazaLabel.Visible = false;
+            fechaEntradaLabel.Visible = false;
+            horaEntradaLabel.Visible = false;
+            fechaSalidaLabel.Visible = false;
+            horaSalidaLabel.Visible = false;
+            matriculaTrenLabel.Visible = false;
+
+            idTextBox.Visible = false;
+            dniConductorTextBox.Visible = false;
+            plazaTextBox.Visible = false;
+            fechaEntradaDateTimePicker.Visible = false;
+            horaEntradaTextBox.Visible = false;
+            fechaSalidaDateTimePicker.Visible = false;
+            horaSalidaTextBox.Visible = false;
+            matriculaTrenTextBox.Visible = false;
+            bAgregar2.Visible = false;
+            bModificar2.Visible = false;
+        }
+
+        private void bBorrar2_Click(object sender, EventArgs e)
+        {
+            RelacionesTableAdapters.HangarTableAdapter h = new RelacionesTableAdapters.HangarTableAdapter();
+            h.BorrarHangar(tbBusqueda.Text);
+            botones();
+        }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+            bBuscarConductor.Visible = false;
+            bBuscarMatricula.Visible = false;
+            bContar.Visible = false;
+            bBorrar.Visible = false;
+            bAgregar.Visible = false;
+            bModificar.Visible = false;
+
+            idLabel.Visible = true;
+            dniConductorLabel.Visible = true;
+            plazaLabel.Visible = true;
+            fechaEntradaLabel.Visible = true;
+            horaEntradaLabel.Visible = true;
+            fechaSalidaLabel.Visible = true;
+            horaSalidaLabel.Visible = true;
+            matriculaTrenLabel.Visible = true;
+
+            idTextBox.Visible = true;
+            dniConductorTextBox.Visible = true;
+            plazaTextBox.Visible = true;
+            fechaEntradaDateTimePicker.Visible = true;
+            horaEntradaTextBox.Visible = true;
+            fechaSalidaDateTimePicker.Visible = true;
+            horaSalidaTextBox.Visible = true;
+            matriculaTrenTextBox.Visible = true;
+            bAgregar2.Visible = true;
+            bCancelar.Visible = true;
+
+        }
+
+        private void bAgregar2_Click(object sender, EventArgs e)
+        {
+            RelacionesTableAdapters.HangarTableAdapter h = new RelacionesTableAdapters.HangarTableAdapter();
+            h.AgregarHangar(idTextBox.Text, dniConductorTextBox.Text, Convert.ToInt32(plazaTextBox.Text), fechaEntradaDateTimePicker.ToString(), horaEntradaTextBox.Text, fechaSalidaDateTimePicker.ToString(), horaSalidaTextBox.Text, matriculaTrenTextBox.Text);
+            botones();
+        }
+
+        private void bModificar_Click(object sender, EventArgs e)
+        {
+            bBuscarConductor.Visible = false;
+            bBuscarMatricula.Visible = false;
+            bContar.Visible = false;
+            bBorrar.Visible = false;
+            bAgregar.Visible = false;
+            bModificar.Visible = false;
+
+            idLabel.Visible = true;
+            dniConductorLabel.Visible = true;
+            plazaLabel.Visible = true;
+            fechaEntradaLabel.Visible = true;
+            horaEntradaLabel.Visible = true;
+            fechaSalidaLabel.Visible = true;
+            horaSalidaLabel.Visible = true;
+            matriculaTrenLabel.Visible = true;
+
+            idTextBox.Visible = true;
+            dniConductorTextBox.Visible = true;
+            plazaTextBox.Visible = true;
+            fechaEntradaDateTimePicker.Visible = true;
+            horaEntradaTextBox.Visible = true;
+            fechaSalidaDateTimePicker.Visible = true;
+            horaSalidaTextBox.Visible = true;
+            matriculaTrenTextBox.Visible = true;
+            bModificar2.Visible = true;
+            bCancelar.Visible = true;
+        }
+
+        private void bModificar2_Click(object sender, EventArgs e)
+        {
+            RelacionesTableAdapters.HangarTableAdapter h = new RelacionesTableAdapters.HangarTableAdapter();
+            h.ModificarHangar(dniConductorTextBox.Text, Convert.ToInt32(plazaTextBox.Text), fechaEntradaDateTimePicker.ToString(), horaEntradaTextBox.Text, fechaSalidaDateTimePicker.ToString(), horaSalidaTextBox.Text, matriculaTrenTextBox.Text, idTextBox.Text);
+            botones();
         }
     }
 }
