@@ -168,6 +168,7 @@ namespace GestionMetroc
             RelacionesTableAdapters.HangarTableAdapter h = new RelacionesTableAdapters.HangarTableAdapter();
             h.BorrarHangar(tbBusqueda.Text);
             botones();
+            this.hangarTableAdapter.Fill(this.relaciones.Hangar);
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
@@ -208,6 +209,7 @@ namespace GestionMetroc
             var fechaEntrada = fechaEntradaDateTimePicker.Value.ToShortDateString();
             h.AgregarHangar(idTextBox.Text, dniConductorTextBox.Text, Convert.ToInt32(plazaTextBox.Text), fechaEntrada, horaEntradaTextBox.Text, fechaSalida, horaSalidaTextBox.Text, matriculaTrenTextBox.Text);
             botones();
+            this.hangarTableAdapter.Fill(this.relaciones.Hangar);
         }
 
         private void bModificar_Click(object sender, EventArgs e)
@@ -247,6 +249,7 @@ namespace GestionMetroc
             var fechaEntrada = fechaEntradaDateTimePicker.Value.ToShortDateString();
             h.ModificarHangar(dniConductorTextBox.Text, Convert.ToInt32(plazaTextBox.Text), fechaEntrada, horaEntradaTextBox.Text, fechaSalida, horaSalidaTextBox.Text, matriculaTrenTextBox.Text, idTextBox.Text);
             botones();
+            this.hangarTableAdapter.Fill(this.relaciones.Hangar);
         }
     }
 }

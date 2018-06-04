@@ -75,6 +75,7 @@ namespace GestionMetroc
             var fechaEntrada= fechaEntradaDateTimePicker.Value.ToShortDateString();
             c.AgregarCuidado(idTextBox.Text, fechaEntrada,horaEntradaTextBox.Text, fechaSalida,horaSalidaTextBox.Text, matriculaTrenTextBox.Text, tipoAtencionTextBox.Text, dniTecnicoTextBox.Text, caracteristicasTextBox.Text, valoracionTextBox.Text);
             botones();
+            this.cuidadosTableAdapter.Fill(this.relaciones.Cuidados);
         }
 
         public void botones() {

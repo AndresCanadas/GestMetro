@@ -131,6 +131,7 @@ namespace GestionMetroc
             es.BorrarEstacion(b);
 
             botones();
+            this.estacionTableAdapter.Fill(this.relaciones.Estacion);
         }
 
         public void botones() {
@@ -196,6 +197,7 @@ namespace GestionMetroc
             RelacionesTableAdapters.EstacionTableAdapter es = new RelacionesTableAdapters.EstacionTableAdapter();
             es.AgregarEstacion(idTextBox.Text, nombreTextBox.Text, idLineaTextBox.Text);
             botones();
+            this.estacionTableAdapter.Fill(this.relaciones.Estacion);
         }
 
         private void bModificar_Click(object sender, EventArgs e)
@@ -223,6 +225,7 @@ namespace GestionMetroc
             RelacionesTableAdapters.EstacionTableAdapter es = new RelacionesTableAdapters.EstacionTableAdapter();
             es.ModificarEstacion(nombreTextBox.Text, idLineaTextBox.Text, idTextBox.Text);
             botones();
+            this.estacionTableAdapter.Fill(this.relaciones.Estacion);
         }
     }
 }

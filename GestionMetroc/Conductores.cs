@@ -127,6 +127,7 @@ namespace GestionMetroc
             c.BorrarConductor(b);
             this.conductoresTableAdapter.Fill(this.relaciones.Conductores);
             botones();
+            this.conductoresTableAdapter.Fill(this.relaciones.Conductores);
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
@@ -221,6 +222,7 @@ namespace GestionMetroc
             var fechaTitulacion = fechaTitulacionDateTimePicker.Value.ToShortDateString();
             c.AgregarConductor(dniTextBox.Text, nombreTextBox.Text, apellidosTextBox.Text, direccionTextBox.Text, Convert.ToInt32(telefonoTextBox.Text), emailTextBox.Text, fechaIngreso,fechaNacimiento,nombreEstudioTextBox.Text, fechaTitulacion, centroTitulacionTextBox.Text);
             botones();
+            this.conductoresTableAdapter.Fill(this.relaciones.Conductores);
         }
 
         private void bModificar_Click(object sender, EventArgs e)
@@ -267,6 +269,7 @@ namespace GestionMetroc
             var fechaTitulacion = fechaTitulacionDateTimePicker.Value.ToShortDateString();
             c.ModificarConductor(nombreTextBox.Text, apellidosTextBox.Text, direccionTextBox.Text, Convert.ToInt32(telefonoTextBox.Text), emailTextBox.Text, fechaIngreso, fechaNacimiento, nombreEstudioTextBox.Text, fechaTitulacion, centroTitulacionTextBox.Text, dniTextBox.Text, dniTextBox.Text);
             botones();
+            this.conductoresTableAdapter.Fill(this.relaciones.Conductores);
         }
     }
 }

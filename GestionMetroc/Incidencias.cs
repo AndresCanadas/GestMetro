@@ -111,6 +111,7 @@ namespace GestionMetroc
             lEstacion.Visible = false;
             lBorrar.Visible = false;
             botones();
+            this.incidenciasTableAdapter.Fill(this.relaciones.Incidencias);
         }
 
         private void bAgregar_Click(object sender, EventArgs e)
@@ -143,6 +144,7 @@ namespace GestionMetroc
             var fecha = fechaDateTimePicker.Value.ToShortDateString();
             i.AgregarIncidencia(Convert.ToInt32(idTextBox.Text), fecha, horaTextBox.Text, nombreEstacionTextBox.Text, caracteristicasTextBox.Text, valoracionTextBox.Text, dniJefeTextBox.Text);
             botones();
+            this.incidenciasTableAdapter.Fill(this.relaciones.Incidencias);
         }
 
         private void bCancelar_Click(object sender, EventArgs e)

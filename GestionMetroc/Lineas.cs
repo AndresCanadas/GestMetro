@@ -130,6 +130,7 @@ namespace GestionMetroc
             bBorrar.Visible = true;
             bAgregar.Visible = true;
             bCancelar.Visible = false;
+            this.lineasTableAdapter.Fill(this.relaciones.Lineas);
         }
 
         private void bCancelar_Click(object sender, EventArgs e)
@@ -170,6 +171,7 @@ namespace GestionMetroc
             String b = tbBusqueda.Text;
             j.BorrarLinea(b);
             botones();
+            this.lineasTableAdapter.Fill(this.relaciones.Lineas);
 
         }
 
@@ -206,6 +208,7 @@ namespace GestionMetroc
             bModificar2.Visible = false;
             idLabel.Visible = false;
             botones();
+            this.lineasTableAdapter.Fill(this.relaciones.Lineas);
 
         }
     }

@@ -127,6 +127,7 @@ namespace GestionMetroc
             String b = tbBusqueda.Text;
             j.BorrarJefe(b);
             botones();
+            this.jefeEstacionTableAdapter.Fill(this.relaciones.JefeEstacion);
         }
 
         public void botones() {
@@ -193,6 +194,7 @@ namespace GestionMetroc
             var fechaEntrada = fechaEntradaDateTimePicker.Value.ToShortDateString();
             j.AgregarJefe(dniTextBox.Text, nombreTextBox.Text, apellidosTextBox.Text, estacionTextBox.Text, fechaEntrada);
             botones();
+            this.jefeEstacionTableAdapter.Fill(this.relaciones.JefeEstacion);
         }
 
         private void bModificar_Click(object sender, EventArgs e)
@@ -225,6 +227,7 @@ namespace GestionMetroc
             var fechaEntrada = fechaEntradaDateTimePicker.Value.ToShortDateString();
             j.ModificarJefe(nombreTextBox.Text, apellidosTextBox.Text, estacionTextBox.Text, fechaEntrada, dniTextBox.Text);
             botones();
+            this.jefeEstacionTableAdapter.Fill(this.relaciones.JefeEstacion);
         }
 
         private void bCancelar_Click(object sender, EventArgs e)

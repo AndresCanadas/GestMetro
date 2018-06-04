@@ -127,7 +127,8 @@ namespace GestionMetroc
             String b = tbBusqueda.Text;
             n.BorrarNominas(b);
             botones();
-            
+            this.nominasTableAdapter.Fill(this.relaciones.Nominas);
+
         }
 
         public void botones() {
@@ -234,6 +235,7 @@ namespace GestionMetroc
             var fecha = fechaDateTimePicker.Value.ToShortDateString();
             n.AgregarNomina(idTextBox.Text, fecha, periodoTextBox.Text, dniEmpleadoTextBox.Text, Convert.ToInt32(sueldoBrutoTextBox.Text), Convert.ToInt32(descuentoSSTextBox.Text), Convert.ToInt32(descuentoIRPFTextBox.Text), Convert.ToInt32(plusTrienosTextBox.Text), Convert.ToInt32(plusProductividadTextBox.Text), Convert.ToInt32(sueldoNetoTextBox.Text), tipoContratoTextBox.Text, Convert.ToInt32(precioHoraTextBox.Text), Convert.ToInt32(totalHorasTextBox.Text));
             botones();
+            this.nominasTableAdapter.Fill(this.relaciones.Nominas);
         }
 
         private void bModificar_Click(object sender, EventArgs e)
@@ -283,6 +285,7 @@ namespace GestionMetroc
             var fecha = fechaDateTimePicker.Value.ToShortDateString();
             n.ModificarNomina(fecha, periodoTextBox.Text, dniEmpleadoTextBox.Text, Convert.ToInt32(sueldoBrutoTextBox.Text), Convert.ToInt32(descuentoSSTextBox.Text), Convert.ToInt32(descuentoIRPFTextBox.Text), Convert.ToInt32(plusTrienosTextBox.Text), Convert.ToInt32(plusProductividadTextBox.Text), Convert.ToInt32(sueldoNetoTextBox.Text), tipoContratoTextBox.Text, Convert.ToInt32(precioHoraTextBox.Text), Convert.ToInt32(totalHorasTextBox.Text), idTextBox.Text);
             botones();
+            this.nominasTableAdapter.Fill(this.relaciones.Nominas);
         }
     }
 
