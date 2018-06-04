@@ -45,6 +45,7 @@ namespace GestionMetroc
             bAgregar.Visible = false;
             bModificar.Visible = false;
             lBorrar.Visible = false;
+            bCancelar.Visible = true;
         }
 
         private void bBuscarJefe_Click_1(object sender, EventArgs e)
@@ -60,6 +61,7 @@ namespace GestionMetroc
             bAgregar.Visible = false;
             bModificar.Visible = false;
             lBorrar.Visible = false;
+            bCancelar.Visible = true;
         }
 
         private void bContar_Click(object sender, EventArgs e)
@@ -73,22 +75,27 @@ namespace GestionMetroc
         {
             bBuscarNombre.Visible = false;
             lnombre.Visible = false;
-            tbBusqueda.Visible = true;
             lIdLinea.Visible = false;
-            bBuscar.Visible = true;
+            bBuscar.Visible = false;
             bBuscarLinea.Visible = false;
             bContar.Visible = false;
             bBorrar.Visible = false;
             bAgregar.Visible = false;
             bModificar.Visible = false;
+            tbBusqueda.Visible = true;
             lBorrar.Visible = true;
+            bBorrar2.Visible = true;
+            bCancelar.Visible = true;
+
+
         }
 
         private void bBuscar_Click(object sender, EventArgs e)
         {
-            bBuscarNombre.Visible = true;
+            
             tbBusqueda.Visible = false;
             bBuscar.Visible = false;
+            bBuscarNombre.Visible = true;
             bBuscarLinea.Visible = true;
             bContar.Visible = true;
             bBorrar.Visible = true;
@@ -110,17 +117,112 @@ namespace GestionMetroc
                 tabla = es.BuscarNombre(b);
                 estacionDataGridView.DataSource = tabla;
             }
-            else if (lBorrar.Visible == true)
-            {
-                RelacionesTableAdapters.EstacionTableAdapter es = new RelacionesTableAdapters.EstacionTableAdapter();
-                String b = tbBusqueda.Text;
-                // c.BorrarConductor(b);
-                // this.cuidadosTableAdapter.Fill(this.relaciones.Cuidados);
-            }
 
             lIdLinea.Visible = false;
             lnombre.Visible = false;
             lBorrar.Visible = false;
+            botones();
+        }
+
+        private void bBorrar2_Click(object sender, EventArgs e)
+        {
+            RelacionesTableAdapters.EstacionTableAdapter es = new RelacionesTableAdapters.EstacionTableAdapter();
+            String b = tbBusqueda.Text;
+            es.BorrarEstacion(b);
+
+            botones();
+        }
+
+        public void botones() {
+            bBuscarNombre.Visible = true;
+            bBuscarLinea.Visible = true;
+            bContar.Visible = true;
+            bBorrar.Visible = true;
+            bAgregar.Visible = true;
+            bModificar.Visible = true;
+
+            lnombre.Visible = false;
+            tbBusqueda.Visible = false;
+            lIdLinea.Visible = false;
+            bBuscar.Visible = false;
+            bBorrar2.Visible = false;
+            lBorrar.Visible = false;
+            bCancelar.Visible = false;
+
+            idLineaLabel.Visible = false;
+            idLabel.Visible = false;
+            nombreLabel.Visible = false;
+
+            idTextBox.Visible = false;
+            idLineaTextBox.Visible = false;
+            nombreTextBox.Visible = false;
+            bAgregar2.Visible = false;
+            bCancelar.Visible = false;
+            bModificar2.Visible = false;
+
+            this.estacionTableAdapter.Fill(this.relaciones.Estacion);
+
+
+        }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+            botones();
+        }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+
+            bBuscarNombre.Visible = false;
+            bBuscarLinea.Visible = false;
+            bContar.Visible = false;
+            bBorrar.Visible = false;
+            bAgregar.Visible = false;
+            bModificar.Visible = false;
+
+            idLineaLabel.Visible = true;
+            idLabel.Visible = true;
+            nombreLabel.Visible = true;
+
+            idTextBox.Visible = true;
+            idLineaTextBox.Visible = true;
+            nombreTextBox.Visible = true;
+            bAgregar2.Visible = true;
+            bCancelar.Visible = true;
+        }
+
+        private void bAgregar2_Click(object sender, EventArgs e)
+        {
+            RelacionesTableAdapters.EstacionTableAdapter es = new RelacionesTableAdapters.EstacionTableAdapter();
+            es.AgregarEstacion(idTextBox.Text, nombreTextBox.Text, idLineaTextBox.Text);
+            botones();
+        }
+
+        private void bModificar_Click(object sender, EventArgs e)
+        {
+            bBuscarNombre.Visible = false;
+            bBuscarLinea.Visible = false;
+            bContar.Visible = false;
+            bBorrar.Visible = false;
+            bAgregar.Visible = false;
+            bModificar.Visible = false;
+
+            idLineaLabel.Visible = true;
+            idLabel.Visible = true;
+            nombreLabel.Visible = true;
+
+            idTextBox.Visible = true;
+            idLineaTextBox.Visible = true;
+            nombreTextBox.Visible = true;
+            bModificar2.Visible = true;
+            bCancelar.Visible = true;
+        }
+
+        private void bModificar2_Click(object sender, EventArgs e)
+        {
+            RelacionesTableAdapters.EstacionTableAdapter es = new RelacionesTableAdapters.EstacionTableAdapter();
+            es.ModificarEstacion(nombreTextBox.Text, idLineaTextBox.Text, idTextBox.Text);
+            botones();
         }
     }
 }

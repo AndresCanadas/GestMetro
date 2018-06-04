@@ -10,7 +10,6 @@ F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc
 F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csproj.CoreCompileInputs.cache
 F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.exe
 F:\Andres Cañadas\GD\Dam 1ºB\Entornos de Desarrollo\3ºTrimestre\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.pdb
-C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csprojResolveAssemblyReference.cache
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Main.resources
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Properties.Resources.resources
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csproj.GenerateResource.cache
@@ -33,3 +32,5 @@ C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMe
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Hangar.resources
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.JefeEstacion.resources
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Lineas.resources
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Nominas.resources
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Tecnicos.resources

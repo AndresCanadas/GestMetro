@@ -29,23 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Incidencias));
-            this.relaciones = new GestionMetroc.Relaciones();
-            this.incidenciasTableAdapter = new GestionMetroc.RelacionesTableAdapters.IncidenciasTableAdapter();
-            this.incidenciasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.incidenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.incidenciasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.incidenciasDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,11 +37,10 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.incidenciasTableAdapter1 = new GestionMetroc.RelacionesTableAdapters.IncidenciasTableAdapter();
+            this.incidenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.relaciones = new GestionMetroc.Relaciones();
             this.lBorrar = new System.Windows.Forms.Label();
-            this.bModificar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
-            this.bBorrar = new System.Windows.Forms.Button();
             this.lJefe = new System.Windows.Forms.Label();
             this.lEstacion = new System.Windows.Forms.Label();
             this.tbBusqueda = new System.Windows.Forms.TextBox();
@@ -66,151 +48,29 @@
             this.bContar = new System.Windows.Forms.Button();
             this.bBuscarJefe = new System.Windows.Forms.Button();
             this.bBuscarEstacion = new System.Windows.Forms.Button();
+            this.incidenciasTableAdapter = new GestionMetroc.RelacionesTableAdapters.IncidenciasTableAdapter();
+            this.incidenciasTableAdapter1 = new GestionMetroc.RelacionesTableAdapters.IncidenciasTableAdapter();
             this.tableAdapterManager = new GestionMetroc.RelacionesTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.relaciones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingNavigator)).BeginInit();
-            this.incidenciasBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).BeginInit();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.fechaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.horaTextBox = new System.Windows.Forms.TextBox();
+            this.nombreEstacionTextBox = new System.Windows.Forms.TextBox();
+            this.caracteristicasTextBox = new System.Windows.Forms.TextBox();
+            this.valoracionTextBox = new System.Windows.Forms.TextBox();
+            this.dniJefeTextBox = new System.Windows.Forms.TextBox();
+            this.LabelId = new System.Windows.Forms.Label();
+            this.LabelFecha = new System.Windows.Forms.Label();
+            this.LabelHora = new System.Windows.Forms.Label();
+            this.LabelNombre = new System.Windows.Forms.Label();
+            this.LabelCarac = new System.Windows.Forms.Label();
+            this.LabelValoracion = new System.Windows.Forms.Label();
+            this.LabelDni = new System.Windows.Forms.Label();
+            this.bAgregar2 = new System.Windows.Forms.Button();
+            this.bCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.relaciones)).BeginInit();
             this.SuspendLayout();
-            // 
-            // relaciones
-            // 
-            this.relaciones.DataSetName = "Relaciones";
-            this.relaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // incidenciasTableAdapter
-            // 
-            this.incidenciasTableAdapter.ClearBeforeFill = true;
-            // 
-            // incidenciasBindingNavigator
-            // 
-            this.incidenciasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.incidenciasBindingNavigator.BindingSource = this.incidenciasBindingSource;
-            this.incidenciasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.incidenciasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.incidenciasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.incidenciasBindingNavigatorSaveItem});
-            this.incidenciasBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.incidenciasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.incidenciasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.incidenciasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.incidenciasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.incidenciasBindingNavigator.Name = "incidenciasBindingNavigator";
-            this.incidenciasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.incidenciasBindingNavigator.Size = new System.Drawing.Size(783, 25);
-            this.incidenciasBindingNavigator.TabIndex = 0;
-            this.incidenciasBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // incidenciasBindingSource
-            // 
-            this.incidenciasBindingSource.DataMember = "Incidencias";
-            this.incidenciasBindingSource.DataSource = this.relaciones;
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // incidenciasBindingNavigatorSaveItem
-            // 
-            this.incidenciasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.incidenciasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("incidenciasBindingNavigatorSaveItem.Image")));
-            this.incidenciasBindingNavigatorSaveItem.Name = "incidenciasBindingNavigatorSaveItem";
-            this.incidenciasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.incidenciasBindingNavigatorSaveItem.Text = "Guardar datos";
-            this.incidenciasBindingNavigatorSaveItem.Click += new System.EventHandler(this.incidenciasBindingNavigatorSaveItem_Click);
             // 
             // incidenciasDataGridView
             // 
@@ -272,57 +132,43 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "DniJefe";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // incidenciasTableAdapter1
+            // incidenciasBindingSource
             // 
-            this.incidenciasTableAdapter1.ClearBeforeFill = true;
+            this.incidenciasBindingSource.DataMember = "Incidencias";
+            this.incidenciasBindingSource.DataSource = this.relaciones;
+            // 
+            // relaciones
+            // 
+            this.relaciones.DataSetName = "Relaciones";
+            this.relaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lBorrar
             // 
             this.lBorrar.AutoSize = true;
             this.lBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lBorrar.Location = new System.Drawing.Point(338, 134);
+            this.lBorrar.Location = new System.Drawing.Point(359, 132);
             this.lBorrar.Name = "lBorrar";
             this.lBorrar.Size = new System.Drawing.Size(114, 20);
             this.lBorrar.TabIndex = 56;
             this.lBorrar.Text = "Borrar por ID";
             this.lBorrar.Visible = false;
             // 
-            // bModificar
-            // 
-            this.bModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bModificar.Location = new System.Drawing.Point(280, 134);
-            this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(107, 53);
-            this.bModificar.TabIndex = 55;
-            this.bModificar.Text = "Modificar";
-            this.bModificar.UseVisualStyleBackColor = true;
-            // 
             // bAgregar
             // 
             this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAgregar.Location = new System.Drawing.Point(156, 134);
+            this.bAgregar.Location = new System.Drawing.Point(560, 12);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(107, 53);
             this.bAgregar.TabIndex = 54;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
-            // 
-            // bBorrar
-            // 
-            this.bBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBorrar.Location = new System.Drawing.Point(32, 134);
-            this.bBorrar.Name = "bBorrar";
-            this.bBorrar.Size = new System.Drawing.Size(107, 53);
-            this.bBorrar.TabIndex = 53;
-            this.bBorrar.Text = "Borrar";
-            this.bBorrar.UseVisualStyleBackColor = true;
-            this.bBorrar.Click += new System.EventHandler(this.bBorrar_Click_1);
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // lJefe
             // 
             this.lJefe.AutoSize = true;
             this.lJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lJefe.Location = new System.Drawing.Point(291, 134);
+            this.lJefe.Location = new System.Drawing.Point(327, 132);
             this.lJefe.Name = "lJefe";
             this.lJefe.Size = new System.Drawing.Size(156, 20);
             this.lJefe.TabIndex = 52;
@@ -333,7 +179,7 @@
             // 
             this.lEstacion.AutoSize = true;
             this.lEstacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lEstacion.Location = new System.Drawing.Point(291, 134);
+            this.lEstacion.Location = new System.Drawing.Point(327, 132);
             this.lEstacion.Name = "lEstacion";
             this.lEstacion.Size = new System.Drawing.Size(194, 20);
             this.lEstacion.TabIndex = 51;
@@ -343,7 +189,7 @@
             // tbBusqueda
             // 
             this.tbBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBusqueda.Location = new System.Drawing.Point(295, 173);
+            this.tbBusqueda.Location = new System.Drawing.Point(331, 171);
             this.tbBusqueda.Name = "tbBusqueda";
             this.tbBusqueda.Size = new System.Drawing.Size(176, 26);
             this.tbBusqueda.TabIndex = 50;
@@ -363,7 +209,7 @@
             // bContar
             // 
             this.bContar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bContar.Location = new System.Drawing.Point(280, 51);
+            this.bContar.Location = new System.Drawing.Point(429, 12);
             this.bContar.Name = "bContar";
             this.bContar.Size = new System.Drawing.Size(107, 53);
             this.bContar.TabIndex = 48;
@@ -374,7 +220,7 @@
             // bBuscarJefe
             // 
             this.bBuscarJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscarJefe.Location = new System.Drawing.Point(156, 51);
+            this.bBuscarJefe.Location = new System.Drawing.Point(305, 12);
             this.bBuscarJefe.Name = "bBuscarJefe";
             this.bBuscarJefe.Size = new System.Drawing.Size(107, 53);
             this.bBuscarJefe.TabIndex = 47;
@@ -385,13 +231,21 @@
             // bBuscarEstacion
             // 
             this.bBuscarEstacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscarEstacion.Location = new System.Drawing.Point(32, 51);
+            this.bBuscarEstacion.Location = new System.Drawing.Point(181, 12);
             this.bBuscarEstacion.Name = "bBuscarEstacion";
             this.bBuscarEstacion.Size = new System.Drawing.Size(107, 53);
             this.bBuscarEstacion.TabIndex = 46;
             this.bBuscarEstacion.Text = "Buscar por estacion";
             this.bBuscarEstacion.UseVisualStyleBackColor = true;
             this.bBuscarEstacion.Click += new System.EventHandler(this.bBuscarEstacion_Click);
+            // 
+            // incidenciasTableAdapter
+            // 
+            this.incidenciasTableAdapter.ClearBeforeFill = true;
+            // 
+            // incidenciasTableAdapter1
+            // 
+            this.incidenciasTableAdapter1.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -411,15 +265,184 @@
             this.tableAdapterManager.UpdateOrder = GestionMetroc.RelacionesTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VagonesTableAdapter = null;
             // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.incidenciasBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(324, 26);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(200, 20);
+            this.idTextBox.TabIndex = 58;
+            this.idTextBox.Visible = false;
+            // 
+            // fechaDateTimePicker
+            // 
+            this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.incidenciasBindingSource, "Fecha", true));
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(324, 52);
+            this.fechaDateTimePicker.Name = "fechaDateTimePicker";
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.fechaDateTimePicker.TabIndex = 60;
+            this.fechaDateTimePicker.Visible = false;
+            // 
+            // horaTextBox
+            // 
+            this.horaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.incidenciasBindingSource, "Hora", true));
+            this.horaTextBox.Location = new System.Drawing.Point(324, 78);
+            this.horaTextBox.Name = "horaTextBox";
+            this.horaTextBox.Size = new System.Drawing.Size(200, 20);
+            this.horaTextBox.TabIndex = 62;
+            this.horaTextBox.Visible = false;
+            // 
+            // nombreEstacionTextBox
+            // 
+            this.nombreEstacionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.incidenciasBindingSource, "NombreEstacion", true));
+            this.nombreEstacionTextBox.Location = new System.Drawing.Point(324, 104);
+            this.nombreEstacionTextBox.Name = "nombreEstacionTextBox";
+            this.nombreEstacionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.nombreEstacionTextBox.TabIndex = 64;
+            this.nombreEstacionTextBox.Visible = false;
+            // 
+            // caracteristicasTextBox
+            // 
+            this.caracteristicasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.incidenciasBindingSource, "Caracteristicas", true));
+            this.caracteristicasTextBox.Location = new System.Drawing.Point(324, 130);
+            this.caracteristicasTextBox.Name = "caracteristicasTextBox";
+            this.caracteristicasTextBox.Size = new System.Drawing.Size(200, 20);
+            this.caracteristicasTextBox.TabIndex = 66;
+            this.caracteristicasTextBox.Visible = false;
+            // 
+            // valoracionTextBox
+            // 
+            this.valoracionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.incidenciasBindingSource, "Valoracion", true));
+            this.valoracionTextBox.Location = new System.Drawing.Point(324, 156);
+            this.valoracionTextBox.Name = "valoracionTextBox";
+            this.valoracionTextBox.Size = new System.Drawing.Size(200, 20);
+            this.valoracionTextBox.TabIndex = 68;
+            this.valoracionTextBox.Visible = false;
+            // 
+            // dniJefeTextBox
+            // 
+            this.dniJefeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.incidenciasBindingSource, "DniJefe", true));
+            this.dniJefeTextBox.Location = new System.Drawing.Point(324, 182);
+            this.dniJefeTextBox.Name = "dniJefeTextBox";
+            this.dniJefeTextBox.Size = new System.Drawing.Size(200, 20);
+            this.dniJefeTextBox.TabIndex = 70;
+            this.dniJefeTextBox.Visible = false;
+            // 
+            // LabelId
+            // 
+            this.LabelId.AutoSize = true;
+            this.LabelId.Location = new System.Drawing.Point(228, 33);
+            this.LabelId.Name = "LabelId";
+            this.LabelId.Size = new System.Drawing.Size(19, 13);
+            this.LabelId.TabIndex = 71;
+            this.LabelId.Text = "Id:";
+            this.LabelId.Visible = false;
+            // 
+            // LabelFecha
+            // 
+            this.LabelFecha.AutoSize = true;
+            this.LabelFecha.Location = new System.Drawing.Point(228, 53);
+            this.LabelFecha.Name = "LabelFecha";
+            this.LabelFecha.Size = new System.Drawing.Size(40, 13);
+            this.LabelFecha.TabIndex = 72;
+            this.LabelFecha.Text = "Fecha:";
+            this.LabelFecha.Visible = false;
+            // 
+            // LabelHora
+            // 
+            this.LabelHora.AutoSize = true;
+            this.LabelHora.Location = new System.Drawing.Point(228, 78);
+            this.LabelHora.Name = "LabelHora";
+            this.LabelHora.Size = new System.Drawing.Size(33, 13);
+            this.LabelHora.TabIndex = 73;
+            this.LabelHora.Text = "Hora:";
+            this.LabelHora.Visible = false;
+            // 
+            // LabelNombre
+            // 
+            this.LabelNombre.AutoSize = true;
+            this.LabelNombre.Location = new System.Drawing.Point(228, 104);
+            this.LabelNombre.Name = "LabelNombre";
+            this.LabelNombre.Size = new System.Drawing.Size(91, 13);
+            this.LabelNombre.TabIndex = 74;
+            this.LabelNombre.Text = "Nombre Estación:";
+            this.LabelNombre.Visible = false;
+            // 
+            // LabelCarac
+            // 
+            this.LabelCarac.AutoSize = true;
+            this.LabelCarac.Location = new System.Drawing.Point(228, 130);
+            this.LabelCarac.Name = "LabelCarac";
+            this.LabelCarac.Size = new System.Drawing.Size(81, 13);
+            this.LabelCarac.TabIndex = 75;
+            this.LabelCarac.Text = "Características:";
+            this.LabelCarac.Visible = false;
+            // 
+            // LabelValoracion
+            // 
+            this.LabelValoracion.AutoSize = true;
+            this.LabelValoracion.Location = new System.Drawing.Point(228, 156);
+            this.LabelValoracion.Name = "LabelValoracion";
+            this.LabelValoracion.Size = new System.Drawing.Size(60, 13);
+            this.LabelValoracion.TabIndex = 76;
+            this.LabelValoracion.Text = "Valoración:";
+            this.LabelValoracion.Visible = false;
+            // 
+            // LabelDni
+            // 
+            this.LabelDni.AutoSize = true;
+            this.LabelDni.Location = new System.Drawing.Point(228, 182);
+            this.LabelDni.Name = "LabelDni";
+            this.LabelDni.Size = new System.Drawing.Size(49, 13);
+            this.LabelDni.TabIndex = 77;
+            this.LabelDni.Text = "Dni Jefe:";
+            this.LabelDni.Visible = false;
+            // 
+            // bAgregar2
+            // 
+            this.bAgregar2.Location = new System.Drawing.Point(342, 217);
+            this.bAgregar2.Name = "bAgregar2";
+            this.bAgregar2.Size = new System.Drawing.Size(75, 23);
+            this.bAgregar2.TabIndex = 78;
+            this.bAgregar2.Text = "Agregar";
+            this.bAgregar2.UseVisualStyleBackColor = true;
+            this.bAgregar2.Visible = false;
+            this.bAgregar2.Click += new System.EventHandler(this.bAgregar2_Click);
+            // 
+            // bCancelar
+            // 
+            this.bCancelar.Location = new System.Drawing.Point(423, 217);
+            this.bCancelar.Name = "bCancelar";
+            this.bCancelar.Size = new System.Drawing.Size(75, 23);
+            this.bCancelar.TabIndex = 79;
+            this.bCancelar.Text = "Cancelar";
+            this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.Visible = false;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
+            // 
             // Incidencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 513);
+            this.ClientSize = new System.Drawing.Size(799, 533);
+            this.Controls.Add(this.bCancelar);
+            this.Controls.Add(this.bAgregar2);
+            this.Controls.Add(this.LabelDni);
+            this.Controls.Add(this.LabelValoracion);
+            this.Controls.Add(this.LabelCarac);
+            this.Controls.Add(this.LabelNombre);
+            this.Controls.Add(this.LabelHora);
+            this.Controls.Add(this.LabelFecha);
+            this.Controls.Add(this.LabelId);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(this.fechaDateTimePicker);
+            this.Controls.Add(this.horaTextBox);
+            this.Controls.Add(this.nombreEstacionTextBox);
+            this.Controls.Add(this.caracteristicasTextBox);
+            this.Controls.Add(this.valoracionTextBox);
+            this.Controls.Add(this.dniJefeTextBox);
             this.Controls.Add(this.lBorrar);
-            this.Controls.Add(this.bModificar);
             this.Controls.Add(this.bAgregar);
-            this.Controls.Add(this.bBorrar);
             this.Controls.Add(this.lJefe);
             this.Controls.Add(this.lEstacion);
             this.Controls.Add(this.tbBusqueda);
@@ -428,16 +451,12 @@
             this.Controls.Add(this.bBuscarJefe);
             this.Controls.Add(this.bBuscarEstacion);
             this.Controls.Add(this.incidenciasDataGridView);
-            this.Controls.Add(this.incidenciasBindingNavigator);
             this.Name = "Incidencias";
             this.Text = "Incidencias";
             this.Load += new System.EventHandler(this.Incidencias_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.relaciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingNavigator)).EndInit();
-            this.incidenciasBindingNavigator.ResumeLayout(false);
-            this.incidenciasBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.incidenciasDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.incidenciasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.relaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,19 +468,6 @@
         private System.Windows.Forms.BindingSource incidenciasBindingSource;
         private RelacionesTableAdapters.IncidenciasTableAdapter incidenciasTableAdapter;
         private RelacionesTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator incidenciasBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton incidenciasBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView incidenciasDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -472,9 +478,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private RelacionesTableAdapters.IncidenciasTableAdapter incidenciasTableAdapter1;
         private System.Windows.Forms.Label lBorrar;
-        private System.Windows.Forms.Button bModificar;
         private System.Windows.Forms.Button bAgregar;
-        private System.Windows.Forms.Button bBorrar;
         private System.Windows.Forms.Label lJefe;
         private System.Windows.Forms.Label lEstacion;
         private System.Windows.Forms.TextBox tbBusqueda;
@@ -482,5 +486,21 @@
         private System.Windows.Forms.Button bContar;
         private System.Windows.Forms.Button bBuscarJefe;
         private System.Windows.Forms.Button bBuscarEstacion;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.DateTimePicker fechaDateTimePicker;
+        private System.Windows.Forms.TextBox horaTextBox;
+        private System.Windows.Forms.TextBox nombreEstacionTextBox;
+        private System.Windows.Forms.TextBox caracteristicasTextBox;
+        private System.Windows.Forms.TextBox valoracionTextBox;
+        private System.Windows.Forms.TextBox dniJefeTextBox;
+        private System.Windows.Forms.Label LabelId;
+        private System.Windows.Forms.Label LabelFecha;
+        private System.Windows.Forms.Label LabelHora;
+        private System.Windows.Forms.Label LabelNombre;
+        private System.Windows.Forms.Label LabelCarac;
+        private System.Windows.Forms.Label LabelValoracion;
+        private System.Windows.Forms.Label LabelDni;
+        private System.Windows.Forms.Button bAgregar2;
+        private System.Windows.Forms.Button bCancelar;
     }
 }

@@ -41,10 +41,9 @@ namespace GestionMetroc
             bBuscar.Visible = true;
             bBuscarJefe.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
-            bModificar.Visible = false;
             lBorrar.Visible = false;
+            bCancelar.Visible = true;
         }
 
         private void bBuscarJefe_Click(object sender, EventArgs e)
@@ -56,10 +55,9 @@ namespace GestionMetroc
             bBuscar.Visible = true;
             bBuscarJefe.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
-            bModificar.Visible = false;
             lBorrar.Visible = false;
+            bCancelar.Visible = true;
         }
 
         private void bContar_Click_1(object sender, EventArgs e)
@@ -74,14 +72,14 @@ namespace GestionMetroc
             bBuscarEstacion.Visible = false;
             lEstacion.Visible = false;
             tbBusqueda.Visible = true;
+            lBorrar.Visible = true;
             lJefe.Visible = false;
-            bBuscar.Visible = true;
+            
             bBuscarJefe.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
             bAgregar.Visible = false;
-            bModificar.Visible = false;
-            lBorrar.Visible = true;
+            
+            bCancelar.Visible = true;
         }
 
         private void bBuscar_Click_1(object sender, EventArgs e)
@@ -91,9 +89,7 @@ namespace GestionMetroc
             bBuscar.Visible = false;
             bBuscarJefe.Visible = true;
             bContar.Visible = true;
-            bBorrar.Visible = true;
             bAgregar.Visible = true;
-            bModificar.Visible = true;
             if (lJefe.Visible == true)
             {
                 DataTable tabla = new DataTable();
@@ -110,17 +106,79 @@ namespace GestionMetroc
                 tabla = i.BuscarEstacion(b);
                 incidenciasDataGridView.DataSource = tabla;
             }
-            else if (lBorrar.Visible == true)
-            {
-                RelacionesTableAdapters.IncidenciasTableAdapter i = new RelacionesTableAdapters.IncidenciasTableAdapter();
-                String b = tbBusqueda.Text;
-                // c.BorrarConductor(b);
-                // this.cuidadosTableAdapter.Fill(this.relaciones.Cuidados);
-            }
 
             lJefe.Visible = false;
             lEstacion.Visible = false;
             lBorrar.Visible = false;
+            botones();
+        }
+
+        private void bAgregar_Click(object sender, EventArgs e)
+        {
+            idTextBox.Visible = true;
+            fechaDateTimePicker.Visible = true;
+            horaTextBox.Visible = true;
+            nombreEstacionTextBox.Visible = true;
+            caracteristicasTextBox.Visible = true;
+            valoracionTextBox.Visible = true;
+            dniJefeTextBox.Visible = true;
+            LabelId.Visible = true;
+            LabelFecha.Visible = true;
+            LabelHora.Visible = true;
+            LabelNombre.Visible = true;
+            LabelCarac.Visible = true;
+            LabelValoracion.Visible = true;
+            LabelDni.Visible = true;
+            bAgregar2.Visible = true;
+            bCancelar.Visible = true;
+            bBuscarEstacion.Visible = false;
+            bBuscarJefe.Visible = false;
+            bContar.Visible = false;
+            bAgregar.Visible = false;
+        }
+
+        private void bAgregar2_Click(object sender, EventArgs e)
+        {
+            RelacionesTableAdapters.IncidenciasTableAdapter i = new RelacionesTableAdapters.IncidenciasTableAdapter();
+            var fecha = fechaDateTimePicker.Value.ToShortDateString();
+            i.AgregarIncidencia(Convert.ToInt32(idTextBox.Text), fecha, horaTextBox.Text, nombreEstacionTextBox.Text, caracteristicasTextBox.Text, valoracionTextBox.Text, dniJefeTextBox.Text);
+            botones();
+        }
+
+        private void bCancelar_Click(object sender, EventArgs e)
+        {
+            botones();
+
+        }
+
+        public void botones() {
+            idTextBox.Visible = false;
+            fechaDateTimePicker.Visible = false;
+            horaTextBox.Visible = false;
+            nombreEstacionTextBox.Visible = false;
+            caracteristicasTextBox.Visible = false;
+            valoracionTextBox.Visible = false;
+            dniJefeTextBox.Visible = false;
+            LabelId.Visible = false;
+            LabelFecha.Visible = false;
+            LabelHora.Visible = false;
+            LabelNombre.Visible = false;
+            LabelCarac.Visible = false;
+            LabelValoracion.Visible = false;
+            LabelDni.Visible = false;
+            bAgregar2.Visible = false;
+            bCancelar.Visible = false;
+            bBuscarEstacion.Visible = true;
+            bBuscarJefe.Visible = true;
+            bContar.Visible = true;
+            bAgregar.Visible = true;
+            tbBusqueda.Visible = false;
+            tbBusqueda.Visible = false;
+            lBorrar.Visible = false;
+            lEstacion.Visible = false;
+            bBuscar.Visible = false;
+            lJefe.Visible = false;
+            this.incidenciasTableAdapter.Fill(this.relaciones.Incidencias);
         }
     }
 }
