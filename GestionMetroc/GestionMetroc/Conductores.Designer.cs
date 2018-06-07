@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Conductores));
+            this.relaciones = new GestionMetroc.Relaciones();
+            this.conductoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.conductoresTableAdapter = new GestionMetroc.RelacionesTableAdapters.ConductoresTableAdapter();
+            this.tableAdapterManager = new GestionMetroc.RelacionesTableAdapters.TableAdapterManager();
             this.conductoresBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -44,16 +48,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.conductoresBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.conductoresDataGridView = new System.Windows.Forms.DataGridView();
-            this.bBuscarDni = new System.Windows.Forms.Button();
-            this.bBuscarNombre = new System.Windows.Forms.Button();
-            this.bContar = new System.Windows.Forms.Button();
-            this.bBuscar = new System.Windows.Forms.Button();
-            this.tbBusqueda = new System.Windows.Forms.TextBox();
-            this.lDni = new System.Windows.Forms.Label();
-            this.lNombre = new System.Windows.Forms.Label();
-            this.bBorrar = new System.Windows.Forms.Button();
-            this.bAgregar = new System.Windows.Forms.Button();
-            this.bModificar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,18 +59,51 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.conductoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.relaciones = new GestionMetroc.Relaciones();
-            this.conductoresTableAdapter = new GestionMetroc.RelacionesTableAdapters.ConductoresTableAdapter();
-            this.tableAdapterManager = new GestionMetroc.RelacionesTableAdapters.TableAdapterManager();
             this.conductoresTableAdapter1 = new GestionMetroc.RelacionesTableAdapters.ConductoresTableAdapter();
-            this.lBorrar = new System.Windows.Forms.Label();
+            this.bBuscarDni = new System.Windows.Forms.Button();
+            this.bBuscarNombre = new System.Windows.Forms.Button();
+            this.bContar = new System.Windows.Forms.Button();
+            this.bBuscar = new System.Windows.Forms.Button();
+            this.tbBusqueda = new System.Windows.Forms.TextBox();
+            this.lDni = new System.Windows.Forms.Label();
+            this.lNombre = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.relaciones)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingNavigator)).BeginInit();
             this.conductoresBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.relaciones)).BeginInit();
             this.SuspendLayout();
+            // 
+            // relaciones
+            // 
+            this.relaciones.DataSetName = "Relaciones";
+            this.relaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // conductoresBindingSource
+            // 
+            this.conductoresBindingSource.DataMember = "Conductores";
+            this.conductoresBindingSource.DataSource = this.relaciones;
+            // 
+            // conductoresTableAdapter
+            // 
+            this.conductoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ConductoresTableAdapter = this.conductoresTableAdapter;
+            this.tableAdapterManager.CuidadosTableAdapter = null;
+            this.tableAdapterManager.EstacionTableAdapter = null;
+            this.tableAdapterManager.HangarTableAdapter = null;
+            this.tableAdapterManager.IncidenciasTableAdapter = null;
+            this.tableAdapterManager.JefeEstacionTableAdapter = null;
+            this.tableAdapterManager.LineasTableAdapter = null;
+            this.tableAdapterManager.NominasTableAdapter = null;
+            this.tableAdapterManager.TecnicosTableAdapter = null;
+            this.tableAdapterManager.TornosTableAdapter = null;
+            this.tableAdapterManager.TrenesTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = GestionMetroc.RelacionesTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VagonesTableAdapter = null;
             // 
             // conductoresBindingNavigator
             // 
@@ -221,114 +248,8 @@
             this.conductoresDataGridView.DataSource = this.conductoresBindingSource;
             this.conductoresDataGridView.Location = new System.Drawing.Point(37, 236);
             this.conductoresDataGridView.Name = "conductoresDataGridView";
-            this.conductoresDataGridView.Size = new System.Drawing.Size(1142, 261);
+            this.conductoresDataGridView.Size = new System.Drawing.Size(1148, 261);
             this.conductoresDataGridView.TabIndex = 23;
-            // 
-            // bBuscarDni
-            // 
-            this.bBuscarDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscarDni.Location = new System.Drawing.Point(37, 60);
-            this.bBuscarDni.Name = "bBuscarDni";
-            this.bBuscarDni.Size = new System.Drawing.Size(107, 53);
-            this.bBuscarDni.TabIndex = 24;
-            this.bBuscarDni.Text = "Buscar por DNI";
-            this.bBuscarDni.UseVisualStyleBackColor = true;
-            this.bBuscarDni.Click += new System.EventHandler(this.bBuscarDni_Click);
-            // 
-            // bBuscarNombre
-            // 
-            this.bBuscarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBuscarNombre.Location = new System.Drawing.Point(161, 60);
-            this.bBuscarNombre.Name = "bBuscarNombre";
-            this.bBuscarNombre.Size = new System.Drawing.Size(107, 53);
-            this.bBuscarNombre.TabIndex = 25;
-            this.bBuscarNombre.Text = "Buscar por nombre";
-            this.bBuscarNombre.UseVisualStyleBackColor = true;
-            this.bBuscarNombre.Click += new System.EventHandler(this.bBuscarNombre_Click);
-            // 
-            // bContar
-            // 
-            this.bContar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bContar.Location = new System.Drawing.Point(285, 60);
-            this.bContar.Name = "bContar";
-            this.bContar.Size = new System.Drawing.Size(107, 53);
-            this.bContar.TabIndex = 26;
-            this.bContar.Text = "Contar conductores";
-            this.bContar.UseVisualStyleBackColor = true;
-            this.bContar.Click += new System.EventHandler(this.bContar_Click);
-            // 
-            // bBuscar
-            // 
-            this.bBuscar.Location = new System.Drawing.Point(581, 173);
-            this.bBuscar.Name = "bBuscar";
-            this.bBuscar.Size = new System.Drawing.Size(75, 23);
-            this.bBuscar.TabIndex = 27;
-            this.bBuscar.Text = "Buscar";
-            this.bBuscar.UseVisualStyleBackColor = true;
-            this.bBuscar.Visible = false;
-            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
-            // 
-            // tbBusqueda
-            // 
-            this.tbBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBusqueda.Location = new System.Drawing.Point(529, 128);
-            this.tbBusqueda.Name = "tbBusqueda";
-            this.tbBusqueda.Size = new System.Drawing.Size(176, 26);
-            this.tbBusqueda.TabIndex = 28;
-            this.tbBusqueda.Visible = false;
-            // 
-            // lDni
-            // 
-            this.lDni.AutoSize = true;
-            this.lDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDni.Location = new System.Drawing.Point(535, 93);
-            this.lDni.Name = "lDni";
-            this.lDni.Size = new System.Drawing.Size(157, 20);
-            this.lDni.TabIndex = 29;
-            this.lDni.Text = "Busqueda por DNI";
-            this.lDni.Visible = false;
-            // 
-            // lNombre
-            // 
-            this.lNombre.AutoSize = true;
-            this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lNombre.Location = new System.Drawing.Point(525, 93);
-            this.lNombre.Name = "lNombre";
-            this.lNombre.Size = new System.Drawing.Size(186, 20);
-            this.lNombre.TabIndex = 30;
-            this.lNombre.Text = "Busqueda por nombre";
-            this.lNombre.Visible = false;
-            // 
-            // bBorrar
-            // 
-            this.bBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBorrar.Location = new System.Drawing.Point(37, 143);
-            this.bBorrar.Name = "bBorrar";
-            this.bBorrar.Size = new System.Drawing.Size(107, 53);
-            this.bBorrar.TabIndex = 31;
-            this.bBorrar.Text = "Borrar";
-            this.bBorrar.UseVisualStyleBackColor = true;
-            this.bBorrar.Click += new System.EventHandler(this.bBorrar_Click);
-            // 
-            // bAgregar
-            // 
-            this.bAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAgregar.Location = new System.Drawing.Point(161, 143);
-            this.bAgregar.Name = "bAgregar";
-            this.bAgregar.Size = new System.Drawing.Size(107, 53);
-            this.bAgregar.TabIndex = 32;
-            this.bAgregar.Text = "Agregar";
-            this.bAgregar.UseVisualStyleBackColor = true;
-            // 
-            // bModificar
-            // 
-            this.bModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bModificar.Location = new System.Drawing.Point(285, 143);
-            this.bModificar.Name = "bModificar";
-            this.bModificar.Size = new System.Drawing.Size(107, 53);
-            this.bModificar.TabIndex = 33;
-            this.bModificar.Text = "Modificar";
-            this.bModificar.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -396,61 +317,89 @@
             this.dataGridViewTextBoxColumn11.HeaderText = "CentroTitulacion";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
-            // conductoresBindingSource
-            // 
-            this.conductoresBindingSource.DataMember = "Conductores";
-            this.conductoresBindingSource.DataSource = this.relaciones;
-            // 
-            // relaciones
-            // 
-            this.relaciones.DataSetName = "Relaciones";
-            this.relaciones.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // conductoresTableAdapter
-            // 
-            this.conductoresTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ConductoresTableAdapter = this.conductoresTableAdapter;
-            this.tableAdapterManager.CuidadosTableAdapter = null;
-            this.tableAdapterManager.EstacionTableAdapter = null;
-            this.tableAdapterManager.HangarTableAdapter = null;
-            this.tableAdapterManager.IncidenciasTableAdapter = null;
-            this.tableAdapterManager.JefeEstacionTableAdapter = null;
-            this.tableAdapterManager.LineasTableAdapter = null;
-            this.tableAdapterManager.NominasTableAdapter = null;
-            this.tableAdapterManager.TecnicosTableAdapter = null;
-            this.tableAdapterManager.TornosTableAdapter = null;
-            this.tableAdapterManager.TrenesTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = GestionMetroc.RelacionesTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.VagonesTableAdapter = null;
-            // 
             // conductoresTableAdapter1
             // 
             this.conductoresTableAdapter1.ClearBeforeFill = true;
             // 
-            // lBorrar
+            // bBuscarDni
             // 
-            this.lBorrar.AutoSize = true;
-            this.lBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lBorrar.Location = new System.Drawing.Point(561, 93);
-            this.lBorrar.Name = "lBorrar";
-            this.lBorrar.Size = new System.Drawing.Size(114, 20);
-            this.lBorrar.TabIndex = 34;
-            this.lBorrar.Text = "Borrar por ID";
-            this.lBorrar.Visible = false;
+            this.bBuscarDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBuscarDni.Location = new System.Drawing.Point(37, 60);
+            this.bBuscarDni.Name = "bBuscarDni";
+            this.bBuscarDni.Size = new System.Drawing.Size(107, 53);
+            this.bBuscarDni.TabIndex = 24;
+            this.bBuscarDni.Text = "Buscar por DNI";
+            this.bBuscarDni.UseVisualStyleBackColor = true;
+            this.bBuscarDni.Click += new System.EventHandler(this.bBuscarDni_Click);
+            // 
+            // bBuscarNombre
+            // 
+            this.bBuscarNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bBuscarNombre.Location = new System.Drawing.Point(161, 60);
+            this.bBuscarNombre.Name = "bBuscarNombre";
+            this.bBuscarNombre.Size = new System.Drawing.Size(107, 53);
+            this.bBuscarNombre.TabIndex = 25;
+            this.bBuscarNombre.Text = "Buscar por nombre";
+            this.bBuscarNombre.UseVisualStyleBackColor = true;
+            this.bBuscarNombre.Click += new System.EventHandler(this.bBuscarNombre_Click);
+            // 
+            // bContar
+            // 
+            this.bContar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bContar.Location = new System.Drawing.Point(285, 60);
+            this.bContar.Name = "bContar";
+            this.bContar.Size = new System.Drawing.Size(107, 53);
+            this.bContar.TabIndex = 26;
+            this.bContar.Text = "Contar conductores";
+            this.bContar.UseVisualStyleBackColor = true;
+            // 
+            // bBuscar
+            // 
+            this.bBuscar.Location = new System.Drawing.Point(581, 173);
+            this.bBuscar.Name = "bBuscar";
+            this.bBuscar.Size = new System.Drawing.Size(75, 23);
+            this.bBuscar.TabIndex = 27;
+            this.bBuscar.Text = "Buscar";
+            this.bBuscar.UseVisualStyleBackColor = true;
+            this.bBuscar.Visible = false;
+            this.bBuscar.Click += new System.EventHandler(this.bBuscar_Click);
+            // 
+            // tbBusqueda
+            // 
+            this.tbBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBusqueda.Location = new System.Drawing.Point(529, 128);
+            this.tbBusqueda.Name = "tbBusqueda";
+            this.tbBusqueda.Size = new System.Drawing.Size(176, 26);
+            this.tbBusqueda.TabIndex = 28;
+            this.tbBusqueda.Visible = false;
+            // 
+            // lDni
+            // 
+            this.lDni.AutoSize = true;
+            this.lDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lDni.Location = new System.Drawing.Point(535, 93);
+            this.lDni.Name = "lDni";
+            this.lDni.Size = new System.Drawing.Size(157, 20);
+            this.lDni.TabIndex = 29;
+            this.lDni.Text = "Busqueda por DNI";
+            this.lDni.Visible = false;
+            // 
+            // lNombre
+            // 
+            this.lNombre.AutoSize = true;
+            this.lNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombre.Location = new System.Drawing.Point(525, 93);
+            this.lNombre.Name = "lNombre";
+            this.lNombre.Size = new System.Drawing.Size(186, 20);
+            this.lNombre.TabIndex = 30;
+            this.lNombre.Text = "Busqueda por nombre";
+            this.lNombre.Visible = false;
             // 
             // Conductores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1224, 517);
-            this.Controls.Add(this.lBorrar);
-            this.Controls.Add(this.bModificar);
-            this.Controls.Add(this.bAgregar);
-            this.Controls.Add(this.bBorrar);
             this.Controls.Add(this.lNombre);
             this.Controls.Add(this.lDni);
             this.Controls.Add(this.tbBusqueda);
@@ -463,12 +412,12 @@
             this.Name = "Conductores";
             this.Text = "Conductores";
             this.Load += new System.EventHandler(this.Conductores_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.relaciones)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingNavigator)).EndInit();
             this.conductoresBindingNavigator.ResumeLayout(false);
             this.conductoresBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.conductoresDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.conductoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.relaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,9 +462,5 @@
         private System.Windows.Forms.TextBox tbBusqueda;
         private System.Windows.Forms.Label lDni;
         private System.Windows.Forms.Label lNombre;
-        private System.Windows.Forms.Button bBorrar;
-        private System.Windows.Forms.Button bAgregar;
-        private System.Windows.Forms.Button bModificar;
-        private System.Windows.Forms.Label lBorrar;
     }
 }

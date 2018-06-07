@@ -69,42 +69,6 @@
     <Compile Include="Conductores.Designer.cs">
       <DependentUpon>Conductores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cuidados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cuidados.Designer.cs">
-      <DependentUpon>Cuidados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Estacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estacion.Designer.cs">
-      <DependentUpon>Estacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Hangar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Hangar.Designer.cs">
-      <DependentUpon>Hangar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Incidencias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Incidencias.Designer.cs">
-      <DependentUpon>Incidencias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="JefeEstacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JefeEstacion.Designer.cs">
-      <DependentUpon>JefeEstacion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Lineas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Lineas.Designer.cs">
-      <DependentUpon>Lineas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +83,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Prueba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prueba.Designer.cs">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="Relaciones.cs">
       <DependentUpon>Relaciones.xsd</DependentUpon>
     </Compile>
@@ -129,24 +99,6 @@
     </Compile>
     <EmbeddedResource Include="Conductores.resx">
       <DependentUpon>Conductores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cuidados.resx">
-      <DependentUpon>Cuidados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estacion.resx">
-      <DependentUpon>Estacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hangar.resx">
-      <DependentUpon>Hangar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Incidencias.resx">
-      <DependentUpon>Incidencias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="JefeEstacion.resx">
-      <DependentUpon>JefeEstacion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Lineas.resx">
-      <DependentUpon>Lineas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -163,6 +115,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Prueba.resx">
+      <DependentUpon>Prueba.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

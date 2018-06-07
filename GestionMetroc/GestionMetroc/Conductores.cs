@@ -41,10 +41,6 @@ namespace GestionMetroc
             bBuscar.Visible = true;
             bBuscarNombre.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
-            bAgregar.Visible = false;
-            bModificar.Visible = false;
-            lBorrar.Visible = false;
 
         }
 
@@ -57,10 +53,6 @@ namespace GestionMetroc
             bBuscar.Visible = true;
             bBuscarNombre.Visible = false;
             bContar.Visible = false;
-            bBorrar.Visible = false;
-            bAgregar.Visible = false;
-            bModificar.Visible = false;
-            lBorrar.Visible = false;
         }
 
         private void bBuscar_Click(object sender, EventArgs e)
@@ -70,9 +62,6 @@ namespace GestionMetroc
             bBuscar.Visible = false;
             bBuscarNombre.Visible = true;
             bContar.Visible = true;
-            bBorrar.Visible = true;
-            bAgregar.Visible = true;
-            bModificar.Visible = true;
             if (lNombre.Visible == true) {
                 DataTable tabla = new DataTable();
                 RelacionesTableAdapters.ConductoresTableAdapter c = new RelacionesTableAdapters.ConductoresTableAdapter();
@@ -85,38 +74,10 @@ namespace GestionMetroc
                 String b = tbBusqueda.Text;
                 tabla = c.BusquedaDni(b);
                 conductoresDataGridView.DataSource = tabla;
-            } else if (lBorrar.Visible == true) {
-                RelacionesTableAdapters.ConductoresTableAdapter c = new RelacionesTableAdapters.ConductoresTableAdapter();
-                String b = tbBusqueda.Text;
-                c.BorrarConductor(b);
-                this.conductoresTableAdapter.Fill(this.relaciones.Conductores);
             }
 
             lNombre.Visible = false;
             lDni.Visible = false;
-            lBorrar.Visible = false;
-        }
-
-        private void bContar_Click(object sender, EventArgs e)
-        {
-            RelacionesTableAdapters.ConductoresTableAdapter c = new RelacionesTableAdapters.ConductoresTableAdapter();
-            var cuenta = c.ContarConductores();
-            MessageBox.Show("Hay en total de " + cuenta.ToString() + " conductores en la tabla.");
-        }
-
-        private void bBorrar_Click(object sender, EventArgs e)
-        {
-            bBuscarDni.Visible = false;
-            lDni.Visible = false;
-            tbBusqueda.Visible = true;
-            lNombre.Visible = false;
-            bBuscar.Visible = true;
-            bBuscarNombre.Visible = false;
-            bContar.Visible = false;
-            bBorrar.Visible = false;
-            bAgregar.Visible = false;
-            bModificar.Visible = false;
-            lBorrar.Visible = true;
         }
     }
 }
