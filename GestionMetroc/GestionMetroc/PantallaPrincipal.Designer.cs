@@ -51,7 +51,6 @@
             this.bJefeEstacion.TabIndex = 11;
             this.bJefeEstacion.Text = "Jefe Estación";
             this.bJefeEstacion.UseVisualStyleBackColor = true;
-            this.bJefeEstacion.Click += new System.EventHandler(this.bJefeEstacion_Click);
             // 
             // bConductores
             // 
@@ -73,7 +72,6 @@
             this.bCuidados.TabIndex = 9;
             this.bCuidados.Text = "Cuidados";
             this.bCuidados.UseVisualStyleBackColor = true;
-            this.bCuidados.Click += new System.EventHandler(this.bCuidados_Click);
             // 
             // bEstacion
             // 
@@ -84,7 +82,6 @@
             this.bEstacion.TabIndex = 8;
             this.bEstacion.Text = "Estación";
             this.bEstacion.UseVisualStyleBackColor = true;
-            this.bEstacion.Click += new System.EventHandler(this.bEstacion_Click);
             // 
             // bHangar
             // 
@@ -95,7 +92,6 @@
             this.bHangar.TabIndex = 7;
             this.bHangar.Text = "Hangar";
             this.bHangar.UseVisualStyleBackColor = true;
-            this.bHangar.Click += new System.EventHandler(this.bHangar_Click);
             // 
             // bIncidencias
             // 

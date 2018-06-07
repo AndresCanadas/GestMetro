@@ -25,11 +25,6 @@ C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\GestionMe
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\LibreriaMetro.dll
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\bin\Debug\LibreriaMetro.pdb
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csproj.CopyComplete
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Prueba.resources
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Conductores.resources
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.PantallaPrincipal.resources
-C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Cuidados.resources
-C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Incidencias.resources
-C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Estacion.resources
-C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Hangar.resources
-C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.JefeEstacion.resources
-C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Lineas.resources

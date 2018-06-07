@@ -19,44 +19,19 @@ namespace GestionMetroc
 
         private void bIncidencias_Click(object sender, EventArgs e)
         {
-            Form incidencias = new Incidencias();
+            var incidencias = new Prueba();
             incidencias.Show();
         }
 
         private void bLineas_Click(object sender, EventArgs e)
         {
-            Form Lineas = new Lineas();
-            Lineas.Show();
+            
         }
 
         private void bConductores_Click(object sender, EventArgs e)
         {
             Form Conductores = new Conductores();
             Conductores.Show();
-        }
-
-        private void bCuidados_Click(object sender, EventArgs e)
-        {
-            Form Cuidados = new Cuidados();
-            Cuidados.Show();
-        }
-
-        private void bEstacion_Click(object sender, EventArgs e)
-        {
-            Form Estacion = new Estacion();
-            Estacion.Show();
-        }
-
-        private void bHangar_Click(object sender, EventArgs e)
-        {
-            Form Hangar = new Hangar();
-            Hangar.Show();
-        }
-
-        private void bJefeEstacion_Click(object sender, EventArgs e)
-        {
-            Form Jefe = new JefeEstacion();
-            Jefe.Show();
         }
     }
 }
