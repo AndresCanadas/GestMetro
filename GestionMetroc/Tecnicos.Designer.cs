@@ -425,7 +425,7 @@
             // 
             // bModificar2
             // 
-            this.bModificar2.Location = new System.Drawing.Point(467, 249);
+            this.bModificar2.Location = new System.Drawing.Point(377, 249);
             this.bModificar2.Name = "bModificar2";
             this.bModificar2.Size = new System.Drawing.Size(75, 23);
             this.bModificar2.TabIndex = 111;
@@ -436,7 +436,7 @@
             // 
             // bAgregar2
             // 
-            this.bAgregar2.Location = new System.Drawing.Point(467, 249);
+            this.bAgregar2.Location = new System.Drawing.Point(406, 249);
             this.bAgregar2.Name = "bAgregar2";
             this.bAgregar2.Size = new System.Drawing.Size(75, 23);
             this.bAgregar2.TabIndex = 110;
@@ -447,7 +447,7 @@
             // 
             // bBorrar2
             // 
-            this.bBorrar2.Location = new System.Drawing.Point(467, 249);
+            this.bBorrar2.Location = new System.Drawing.Point(406, 264);
             this.bBorrar2.Name = "bBorrar2";
             this.bBorrar2.Size = new System.Drawing.Size(75, 23);
             this.bBorrar2.TabIndex = 109;

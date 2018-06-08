@@ -47,6 +47,7 @@
             this.bEntrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pbTitulo = new System.Windows.Forms.PictureBox();
+            this.bAyuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbTitulo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,28 +169,31 @@
             this.bTornos.Text = "Tornos";
             this.bTornos.UseVisualStyleBackColor = true;
             this.bTornos.Visible = false;
+            this.bTornos.Click += new System.EventHandler(this.bTornos_Click);
             // 
             // bTrenes
             // 
             this.bTrenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bTrenes.Location = new System.Drawing.Point(12, 214);
+            this.bTrenes.Location = new System.Drawing.Point(245, 214);
             this.bTrenes.Name = "bTrenes";
             this.bTrenes.Size = new System.Drawing.Size(124, 61);
             this.bTrenes.TabIndex = 16;
             this.bTrenes.Text = "Trenes";
             this.bTrenes.UseVisualStyleBackColor = true;
             this.bTrenes.Visible = false;
+            this.bTrenes.Click += new System.EventHandler(this.bTrenes_Click);
             // 
             // bVagones
             // 
             this.bVagones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bVagones.Location = new System.Drawing.Point(171, 214);
+            this.bVagones.Location = new System.Drawing.Point(404, 214);
             this.bVagones.Name = "bVagones";
             this.bVagones.Size = new System.Drawing.Size(133, 61);
             this.bVagones.TabIndex = 17;
             this.bVagones.Text = "Vagones";
             this.bVagones.UseVisualStyleBackColor = true;
             this.bVagones.Visible = false;
+            this.bVagones.Click += new System.EventHandler(this.bVagones_Click);
             // 
             // lUsuario
             // 
@@ -257,11 +261,23 @@
             this.pbTitulo.TabIndex = 24;
             this.pbTitulo.TabStop = false;
             // 
+            // bAyuda
+            // 
+            this.bAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAyuda.Location = new System.Drawing.Point(680, 331);
+            this.bAyuda.Name = "bAyuda";
+            this.bAyuda.Size = new System.Drawing.Size(63, 35);
+            this.bAyuda.TabIndex = 25;
+            this.bAyuda.Text = "Ayuda";
+            this.bAyuda.UseVisualStyleBackColor = true;
+            this.bAyuda.Click += new System.EventHandler(this.bAyuda_Click);
+            // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bAyuda);
             this.Controls.Add(this.pbTitulo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bEntrar);
@@ -310,5 +326,6 @@
         private System.Windows.Forms.Button bEntrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbTitulo;
+        private System.Windows.Forms.Button bAyuda;
     }
 }

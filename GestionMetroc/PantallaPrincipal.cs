@@ -100,5 +100,29 @@ namespace GestionMetroc
                 MessageBox.Show("Usuario o contraseña incorrectos");
             }
         }
+
+        private void bTornos_Click(object sender, EventArgs e)
+        {
+            Form Tornos = new Tornos();
+            Tornos.Show();
+        }
+
+        private void bTrenes_Click(object sender, EventArgs e)
+        {
+            Form Trenes = new Trenes();
+            Trenes.Show();
+        }
+
+        private void bVagones_Click(object sender, EventArgs e)
+        {
+            Form Vagones = new Vagones();
+            Vagones.Show();
+        }
+
+        private void bAyuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bienvenido a la aplicacion de gestion de metro. Es facil de manejar, para buscar tienes diferentes opciones en cada tabla.\n" +
+                "Para modificar alguna tabla debes en el campo id poner la id de la linea que quieres modificar y acto seguido poner los demas datos. ");
+        }
     }
 }

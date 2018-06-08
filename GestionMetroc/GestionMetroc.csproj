@@ -139,6 +139,24 @@
     <Compile Include="Tecnicos.Designer.cs">
       <DependentUpon>Tecnicos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tornos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tornos.Designer.cs">
+      <DependentUpon>Tornos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trenes.Designer.cs">
+      <DependentUpon>Trenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vagones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vagones.Designer.cs">
+      <DependentUpon>Vagones.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Conductores.resx">
       <DependentUpon>Conductores.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +199,15 @@
     </Compile>
     <EmbeddedResource Include="Tecnicos.resx">
       <DependentUpon>Tecnicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tornos.resx">
+      <DependentUpon>Tornos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trenes.resx">
+      <DependentUpon>Trenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vagones.resx">
+      <DependentUpon>Vagones.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

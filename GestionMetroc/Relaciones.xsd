@@ -843,7 +843,7 @@ SELECT Id, Fecha, Periodo, DniEmpleado, SueldoBruto, DescuentoSS, DescuentoIRPF,
               <Mapping SourceColumn="TotalHoras" DataSetColumn="TotalHoras" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AgregarNomina" Modifier="Public" Name="AgregarNomina" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="AgregarNomina">
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AgregarNomina" Modifier="Public" Name="AgregarNomina" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AgregarNomina">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[Nominas] ([Id], [Fecha], [Periodo], [DniEmpleado], [SueldoBruto], [DescuentoSS], [DescuentoIRPF], [PlusTrienos], [PlusProductividad], [SueldoNeto], [TipoContrato], [PrecioHora], [TotalHoras]) VALUES (@Id, @Fecha, @Periodo, @DniEmpleado, @SueldoBruto, @DescuentoSS, @DescuentoIRPF, @PlusTrienos, @PlusProductividad, @SueldoNeto, @TipoContrato, @PrecioHora, @TotalHoras);
@@ -866,7 +866,7 @@ SELECT Id, Fecha, Periodo, DniEmpleado, SueldoBruto, DescuentoSS, DescuentoIRPF,
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
-              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BorrarNominas" Modifier="Public" Name="BorrarNominas" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="BorrarNominas">
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BorrarNominas" Modifier="Public" Name="BorrarNominas" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="BorrarNominas">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM [dbo].[Nominas] WHERE Id = @Original_Id</CommandText>
@@ -876,7 +876,7 @@ SELECT Id, Fecha, Periodo, DniEmpleado, SueldoBruto, DescuentoSS, DescuentoIRPF,
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ContarNominas" Modifier="Public" Name="ContarNominas" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ContarNominas">
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ContarNominas" Modifier="Public" Name="ContarNominas" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ContarNominas">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT COUNT(*) FROM Nominas</CommandText>
@@ -904,7 +904,7 @@ SELECT Id, Fecha, Periodo, DniEmpleado, SueldoBruto, DescuentoSS, DescuentoIRPF,
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ModificarNomina" Modifier="Public" Name="ModificarNomina" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ModificarNomina">
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ModificarNomina" Modifier="Public" Name="ModificarNomina" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ModificarNomina">
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>UPDATE [dbo].[Nominas] SET [Fecha] = @Fecha, [Periodo] = @Periodo, [DniEmpleado] = @DniEmpleado, [SueldoBruto] = @SueldoBruto, [DescuentoSS] = @DescuentoSS, [DescuentoIRPF] = @DescuentoIRPF, [PlusTrienos] = @PlusTrienos, [PlusProductividad] = @PlusProductividad, [SueldoNeto] = @SueldoNeto, [TipoContrato] = @TipoContrato, [PrecioHora] = @PrecioHora, [TotalHoras] = @TotalHoras WHERE Id = @Original_Id;
@@ -1027,7 +1027,7 @@ SELECT Dni, Nombre, Apellidos, Direccion, Telefono, Email, FechaNacimiento, Fech
               <Mapping SourceColumn="TipoTrabajo" DataSetColumn="TipoTrabajo" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AgregarTecnico" Modifier="Public" Name="AgregarTecnico" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="AgregarTecnico">
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AgregarTecnico" Modifier="Public" Name="AgregarTecnico" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AgregarTecnico">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[Tecnicos] ([Dni], [Nombre], [Apellidos], [Direccion], [Telefono], [Email], [FechaNacimiento], [FechaEntrada], [TipoTrabajo]) VALUES (@Dni, @Nombre, @Apellidos, @Direccion, @Telefono, @Email, @FechaNacimiento, @FechaEntrada, @TipoTrabajo);
@@ -1056,7 +1056,7 @@ SELECT Dni, Nombre, Apellidos, Direccion, Telefono, Email, FechaNacimiento, Fech
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ContarTecnicos" Modifier="Public" Name="ContarTecnicos" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ContarTecnicos">
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ContarTecnicos" Modifier="Public" Name="ContarTecnicos" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ContarTecnicos">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT COUNT(*) FROM Tecnicos</CommandText>
@@ -1202,7 +1202,84 @@ SELECT Matricula, DniConductor, Nombre, Modelo, FechaConstruccion, Potencia, Vel
               <Mapping SourceColumn="FrenosSe" DataSetColumn="FrenosSe" />
               <Mapping SourceColumn="SistemaAA" DataSetColumn="SistemaAA" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AgregarTren" Modifier="Public" Name="AgregarTren" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AgregarTren">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[Trenes] ([Matricula], [DniConductor], [Nombre], [Modelo], [FechaConstruccion], [Potencia], [VelocidadMax], [FrenosSe], [SistemaAA]) VALUES (@Matricula, @DniConductor, @Nombre, @Modelo, @FechaConstruccion, @Potencia, @VelocidadMax, @FrenosSe, @SistemaAA);
+SELECT Matricula, DniConductor, Nombre, Modelo, FechaConstruccion, Potencia, VelocidadMax, FrenosSe, SistemaAA FROM Trenes</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Matricula" ColumnName="Matricula" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Matricula" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="DniConductor" ColumnName="DniConductor" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@DniConductor" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="DniConductor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Nombre" ColumnName="Nombre" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Modelo" ColumnName="Modelo" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Modelo" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Modelo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="FechaConstruccion" ColumnName="FechaConstruccion" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@FechaConstruccion" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="FechaConstruccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Potencia" ColumnName="Potencia" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@Potencia" Precision="0" ProviderType="Float" Scale="0" Size="8" SourceColumn="Potencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="VelocidadMax" ColumnName="VelocidadMax" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@VelocidadMax" Precision="0" ProviderType="Float" Scale="0" Size="8" SourceColumn="VelocidadMax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="FrenosSe" ColumnName="FrenosSe" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@FrenosSe" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="FrenosSe" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SistemaAA" ColumnName="SistemaAA" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@SistemaAA" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="SistemaAA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BorrarTren" Modifier="Public" Name="BorrarTren" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="BorrarTren">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM [dbo].[Trenes] WHERE Matricula = @Original_Matricula</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Matricula" ColumnName="Matricula" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Original_Matricula" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ContarTrenes" Modifier="Public" Name="ContarTrenes" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ContarTrenes">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) FROM Trenes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="dbo.Trenes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="BuscarMatricula" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="BuscarMatricula" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarMatricula" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Matricula, DniConductor, Nombre, Modelo, FechaConstruccion, Potencia, VelocidadMax, FrenosSe, SistemaAA FROM dbo.Trenes WHERE Matricula = @parametro</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="parametro" ColumnName="Matricula" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@parametro" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="dbo.Trenes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="BuscarPotencia" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="BuscarPotencia" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarPotencia" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Matricula, DniConductor, Nombre, Modelo, FechaConstruccion, Potencia, VelocidadMax, FrenosSe, SistemaAA FROM dbo.Trenes WHERE Potencia &lt; @parametro</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="parametro" ColumnName="Potencia" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@parametro" Precision="0" ProviderType="Float" Scale="0" Size="8" SourceColumn="Potencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ModificarTren" Modifier="Public" Name="ModificarTren" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ModificarTren">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [dbo].[Trenes] SET [DniConductor] = @DniConductor, [Nombre] = @Nombre, [Modelo] = @Modelo, [FechaConstruccion] = @FechaConstruccion, [Potencia] = @Potencia, [VelocidadMax] = @VelocidadMax, [FrenosSe] = @FrenosSe, [SistemaAA] = @SistemaAA WHERE Matricula = @Original_Matricula;
+SELECT Matricula, DniConductor, Nombre, Modelo, FechaConstruccion, Potencia, VelocidadMax, FrenosSe, SistemaAA FROM Trenes</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="DniConductor" ColumnName="DniConductor" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@DniConductor" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="DniConductor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Nombre" ColumnName="Nombre" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Nombre" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Nombre" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Modelo" ColumnName="Modelo" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Modelo" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Modelo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="FechaConstruccion" ColumnName="FechaConstruccion" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@FechaConstruccion" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="FechaConstruccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Potencia" ColumnName="Potencia" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@Potencia" Precision="0" ProviderType="Float" Scale="0" Size="8" SourceColumn="Potencia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="VelocidadMax" ColumnName="VelocidadMax" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@VelocidadMax" Precision="0" ProviderType="Float" Scale="0" Size="8" SourceColumn="VelocidadMax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="FrenosSe" ColumnName="FrenosSe" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@FrenosSe" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="FrenosSe" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SistemaAA" ColumnName="SistemaAA" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@SistemaAA" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="SistemaAA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Matricula" ColumnName="Matricula" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Trenes" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Original_Matricula" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VagonesTableAdapter" GeneratorDataComponentClassName="VagonesTableAdapter" Name="Vagones" UserDataComponentName="VagonesTableAdapter">
             <MainSource>
@@ -1273,7 +1350,66 @@ SELECT Matricula, CapacidadPS, CapacidadPP, FechaConstruccion, MatriculaTren FRO
               <Mapping SourceColumn="FechaConstruccion" DataSetColumn="FechaConstruccion" />
               <Mapping SourceColumn="MatriculaTren" DataSetColumn="MatriculaTren" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AgregarVagones" Modifier="Public" Name="AgregarVagones" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AgregarVagones">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[Vagones] ([Matricula], [CapacidadPS], [CapacidadPP], [FechaConstruccion], [MatriculaTren]) VALUES (@Matricula, @CapacidadPS, @CapacidadPP, @FechaConstruccion, @MatriculaTren);
+SELECT Matricula, CapacidadPS, CapacidadPP, FechaConstruccion, MatriculaTren FROM Vagones</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Matricula" ColumnName="Matricula" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Matricula" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CapacidadPS" ColumnName="CapacidadPS" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CapacidadPS" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CapacidadPS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CapacidadPP" ColumnName="CapacidadPP" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CapacidadPP" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CapacidadPP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="FechaConstruccion" ColumnName="FechaConstruccion" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@FechaConstruccion" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="FechaConstruccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="MatriculaTren" ColumnName="MatriculaTren" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@MatriculaTren" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="MatriculaTren" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BorrarVagones" Modifier="Public" Name="BorrarVagones" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="BorrarVagones">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM [dbo].[Vagones] WHERE Matricula = @Original_Matricula</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Matricula" ColumnName="Matricula" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Original_Matricula" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ContarVagones" Modifier="Public" Name="ContarVagones" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ContarVagones">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) FROM Vagones</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="dbo.Vagones" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="buscarMatricula" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="buscarMatricula" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="buscarMatricula" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Matricula, CapacidadPS, CapacidadPP, FechaConstruccion, MatriculaTren FROM dbo.Vagones WHERE Matricula = @parametro</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="parametro" ColumnName="Matricula" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@parametro" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ModificarVagones" Modifier="Public" Name="ModificarVagones" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ModificarVagones">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [dbo].[Vagones] SET [CapacidadPS] = @CapacidadPS, [CapacidadPP] = @CapacidadPP, [FechaConstruccion] = @FechaConstruccion, [MatriculaTren] = @MatriculaTren WHERE Matricula = @Original_Matricula;
+SELECT Matricula, CapacidadPS, CapacidadPP, FechaConstruccion, MatriculaTren FROM Vagones</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="CapacidadPS" ColumnName="CapacidadPS" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CapacidadPS" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CapacidadPS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="CapacidadPP" ColumnName="CapacidadPP" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CapacidadPP" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CapacidadPP" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="FechaConstruccion" ColumnName="FechaConstruccion" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@FechaConstruccion" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="FechaConstruccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="MatriculaTren" ColumnName="MatriculaTren" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@MatriculaTren" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="MatriculaTren" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Matricula" ColumnName="Matricula" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Vagones" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Original_Matricula" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Matricula" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LineasTableAdapter" GeneratorDataComponentClassName="LineasTableAdapter" Name="Lineas" UserDataComponentName="LineasTableAdapter">
             <MainSource>
@@ -1719,7 +1855,64 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
               <Mapping SourceColumn="Nps" DataSetColumn="Nps" />
               <Mapping SourceColumn="Estacion" DataSetColumn="Estacion" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AgregarTornos" Modifier="Public" Name="AgregarTornos" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AgregarTornos">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [dbo].[Tornos] ([Id], [Npe], [Nps], [Estacion]) VALUES (@Id, @Npe, @Nps, @Estacion);
+SELECT Id, Npe, Nps, Estacion FROM Tornos</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Npe" ColumnName="Npe" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Npe" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Npe" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Nps" ColumnName="Nps" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Nps" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Nps" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Estacion" ColumnName="Estacion" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Estacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Estacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BorrarTornos" Modifier="Public" Name="BorrarTornos" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="BorrarTornos">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM [dbo].[Tornos] WHERE Id = @Original_Id</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Id" ColumnName="Id" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ContarTornos" Modifier="Public" Name="ContarTornos" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ContarTornos">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(*) FROM Tornos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="dbo.Tornos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="BuscarEstacion" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="BuscarEstacion" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="BuscarEstacion" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Id, Npe, Nps, Estacion FROM dbo.Tornos WHERE Estacion = @parametro</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="parametro" ColumnName="Estacion" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@parametro" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Estacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="MetroConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ModificarTorno" Modifier="Public" Name="ModificarTorno" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ModificarTorno">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE [dbo].[Tornos] SET [Npe] = @Npe, [Nps] = @Nps, [Estacion] = @Estacion WHERE Id = @Original_Id;
+SELECT Id, Npe, Nps, Estacion FROM Tornos;</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Npe" ColumnName="Npe" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Npe" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Npe" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Nps" ColumnName="Nps" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Nps" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Nps" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Estacion" ColumnName="Estacion" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Estacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Estacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_Id" ColumnName="Id" DataSourceName="[C:\USERS\ALEXH\DESKTOP\GESTMETRO\GESTIONMETROC\GESTIONMETROC\METRO.MDF].dbo.Tornos" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -1729,7 +1922,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
   <xs:element name="Relaciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Relaciones" msprop:Generator_UserDSName="Relaciones">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Conductores" msprop:Generator_TableClassName="ConductoresDataTable" msprop:Generator_TableVarName="tableConductores" msprop:Generator_TablePropName="Conductores" msprop:Generator_RowDeletingName="ConductoresRowDeleting" msprop:Generator_RowChangingName="ConductoresRowChanging" msprop:Generator_RowEvHandlerName="ConductoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ConductoresRowDeleted" msprop:Generator_UserTableName="Conductores" msprop:Generator_RowChangedName="ConductoresRowChanged" msprop:Generator_RowEvArgName="ConductoresRowChangeEvent" msprop:Generator_RowClassName="ConductoresRow">
+        <xs:element name="Conductores" msprop:Generator_TableClassName="ConductoresDataTable" msprop:Generator_TableVarName="tableConductores" msprop:Generator_RowChangedName="ConductoresRowChanged" msprop:Generator_TablePropName="Conductores" msprop:Generator_RowDeletingName="ConductoresRowDeleting" msprop:Generator_RowChangingName="ConductoresRowChanging" msprop:Generator_RowEvHandlerName="ConductoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ConductoresRowDeleted" msprop:Generator_RowClassName="ConductoresRow" msprop:Generator_UserTableName="Conductores" msprop:Generator_RowEvArgName="ConductoresRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Dni" msprop:Generator_ColumnVarNameInTable="columnDni" msprop:Generator_ColumnPropNameInRow="Dni" msprop:Generator_ColumnPropNameInTable="DniColumn" msprop:Generator_UserColumnName="Dni">
@@ -1788,7 +1981,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Cuidados" msprop:Generator_TableClassName="CuidadosDataTable" msprop:Generator_TableVarName="tableCuidados" msprop:Generator_TablePropName="Cuidados" msprop:Generator_RowDeletingName="CuidadosRowDeleting" msprop:Generator_RowChangingName="CuidadosRowChanging" msprop:Generator_RowEvHandlerName="CuidadosRowChangeEventHandler" msprop:Generator_RowDeletedName="CuidadosRowDeleted" msprop:Generator_UserTableName="Cuidados" msprop:Generator_RowChangedName="CuidadosRowChanged" msprop:Generator_RowEvArgName="CuidadosRowChangeEvent" msprop:Generator_RowClassName="CuidadosRow">
+        <xs:element name="Cuidados" msprop:Generator_TableClassName="CuidadosDataTable" msprop:Generator_TableVarName="tableCuidados" msprop:Generator_RowChangedName="CuidadosRowChanged" msprop:Generator_TablePropName="Cuidados" msprop:Generator_RowDeletingName="CuidadosRowDeleting" msprop:Generator_RowChangingName="CuidadosRowChanging" msprop:Generator_RowEvHandlerName="CuidadosRowChangeEventHandler" msprop:Generator_RowDeletedName="CuidadosRowDeleted" msprop:Generator_RowClassName="CuidadosRow" msprop:Generator_UserTableName="Cuidados" msprop:Generator_RowEvArgName="CuidadosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id">
@@ -1840,7 +2033,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Hangar" msprop:Generator_TableClassName="HangarDataTable" msprop:Generator_TableVarName="tableHangar" msprop:Generator_TablePropName="Hangar" msprop:Generator_RowDeletingName="HangarRowDeleting" msprop:Generator_RowChangingName="HangarRowChanging" msprop:Generator_RowEvHandlerName="HangarRowChangeEventHandler" msprop:Generator_RowDeletedName="HangarRowDeleted" msprop:Generator_UserTableName="Hangar" msprop:Generator_RowChangedName="HangarRowChanged" msprop:Generator_RowEvArgName="HangarRowChangeEvent" msprop:Generator_RowClassName="HangarRow">
+        <xs:element name="Hangar" msprop:Generator_TableClassName="HangarDataTable" msprop:Generator_TableVarName="tableHangar" msprop:Generator_RowChangedName="HangarRowChanged" msprop:Generator_TablePropName="Hangar" msprop:Generator_RowDeletingName="HangarRowDeleting" msprop:Generator_RowChangingName="HangarRowChanging" msprop:Generator_RowEvHandlerName="HangarRowChangeEventHandler" msprop:Generator_RowDeletedName="HangarRowDeleted" msprop:Generator_RowClassName="HangarRow" msprop:Generator_UserTableName="Hangar" msprop:Generator_RowEvArgName="HangarRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id">
@@ -1872,7 +2065,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="JefeEstacion" msprop:Generator_TableClassName="JefeEstacionDataTable" msprop:Generator_TableVarName="tableJefeEstacion" msprop:Generator_TablePropName="JefeEstacion" msprop:Generator_RowDeletingName="JefeEstacionRowDeleting" msprop:Generator_RowChangingName="JefeEstacionRowChanging" msprop:Generator_RowEvHandlerName="JefeEstacionRowChangeEventHandler" msprop:Generator_RowDeletedName="JefeEstacionRowDeleted" msprop:Generator_UserTableName="JefeEstacion" msprop:Generator_RowChangedName="JefeEstacionRowChanged" msprop:Generator_RowEvArgName="JefeEstacionRowChangeEvent" msprop:Generator_RowClassName="JefeEstacionRow">
+        <xs:element name="JefeEstacion" msprop:Generator_TableClassName="JefeEstacionDataTable" msprop:Generator_TableVarName="tableJefeEstacion" msprop:Generator_RowChangedName="JefeEstacionRowChanged" msprop:Generator_TablePropName="JefeEstacion" msprop:Generator_RowDeletingName="JefeEstacionRowDeleting" msprop:Generator_RowChangingName="JefeEstacionRowChanging" msprop:Generator_RowEvHandlerName="JefeEstacionRowChangeEventHandler" msprop:Generator_RowDeletedName="JefeEstacionRowDeleted" msprop:Generator_RowClassName="JefeEstacionRow" msprop:Generator_UserTableName="JefeEstacion" msprop:Generator_RowEvArgName="JefeEstacionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Dni" msprop:Generator_ColumnVarNameInTable="columnDni" msprop:Generator_ColumnPropNameInRow="Dni" msprop:Generator_ColumnPropNameInTable="DniColumn" msprop:Generator_UserColumnName="Dni">
@@ -1901,7 +2094,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Nominas" msprop:Generator_TableClassName="NominasDataTable" msprop:Generator_TableVarName="tableNominas" msprop:Generator_TablePropName="Nominas" msprop:Generator_RowDeletingName="NominasRowDeleting" msprop:Generator_RowChangingName="NominasRowChanging" msprop:Generator_RowEvHandlerName="NominasRowChangeEventHandler" msprop:Generator_RowDeletedName="NominasRowDeleted" msprop:Generator_UserTableName="Nominas" msprop:Generator_RowChangedName="NominasRowChanged" msprop:Generator_RowEvArgName="NominasRowChangeEvent" msprop:Generator_RowClassName="NominasRow">
+        <xs:element name="Nominas" msprop:Generator_TableClassName="NominasDataTable" msprop:Generator_TableVarName="tableNominas" msprop:Generator_RowChangedName="NominasRowChanged" msprop:Generator_TablePropName="Nominas" msprop:Generator_RowDeletingName="NominasRowDeleting" msprop:Generator_RowChangingName="NominasRowChanging" msprop:Generator_RowEvHandlerName="NominasRowChangeEventHandler" msprop:Generator_RowDeletedName="NominasRowDeleted" msprop:Generator_RowClassName="NominasRow" msprop:Generator_UserTableName="Nominas" msprop:Generator_RowEvArgName="NominasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id">
@@ -1944,7 +2137,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Tecnicos" msprop:Generator_TableClassName="TecnicosDataTable" msprop:Generator_TableVarName="tableTecnicos" msprop:Generator_TablePropName="Tecnicos" msprop:Generator_RowDeletingName="TecnicosRowDeleting" msprop:Generator_RowChangingName="TecnicosRowChanging" msprop:Generator_RowEvHandlerName="TecnicosRowChangeEventHandler" msprop:Generator_RowDeletedName="TecnicosRowDeleted" msprop:Generator_UserTableName="Tecnicos" msprop:Generator_RowChangedName="TecnicosRowChanged" msprop:Generator_RowEvArgName="TecnicosRowChangeEvent" msprop:Generator_RowClassName="TecnicosRow">
+        <xs:element name="Tecnicos" msprop:Generator_TableClassName="TecnicosDataTable" msprop:Generator_TableVarName="tableTecnicos" msprop:Generator_RowChangedName="TecnicosRowChanged" msprop:Generator_TablePropName="Tecnicos" msprop:Generator_RowDeletingName="TecnicosRowDeleting" msprop:Generator_RowChangingName="TecnicosRowChanging" msprop:Generator_RowEvHandlerName="TecnicosRowChangeEventHandler" msprop:Generator_RowDeletedName="TecnicosRowDeleted" msprop:Generator_RowClassName="TecnicosRow" msprop:Generator_UserTableName="Tecnicos" msprop:Generator_RowEvArgName="TecnicosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Dni" msprop:Generator_ColumnVarNameInTable="columnDni" msprop:Generator_ColumnPropNameInRow="Dni" msprop:Generator_ColumnPropNameInTable="DniColumn" msprop:Generator_UserColumnName="Dni">
@@ -1995,7 +2188,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Trenes" msprop:Generator_TableClassName="TrenesDataTable" msprop:Generator_TableVarName="tableTrenes" msprop:Generator_TablePropName="Trenes" msprop:Generator_RowDeletingName="TrenesRowDeleting" msprop:Generator_RowChangingName="TrenesRowChanging" msprop:Generator_RowEvHandlerName="TrenesRowChangeEventHandler" msprop:Generator_RowDeletedName="TrenesRowDeleted" msprop:Generator_UserTableName="Trenes" msprop:Generator_RowChangedName="TrenesRowChanged" msprop:Generator_RowEvArgName="TrenesRowChangeEvent" msprop:Generator_RowClassName="TrenesRow">
+        <xs:element name="Trenes" msprop:Generator_TableClassName="TrenesDataTable" msprop:Generator_TableVarName="tableTrenes" msprop:Generator_RowChangedName="TrenesRowChanged" msprop:Generator_TablePropName="Trenes" msprop:Generator_RowDeletingName="TrenesRowDeleting" msprop:Generator_RowChangingName="TrenesRowChanging" msprop:Generator_RowEvHandlerName="TrenesRowChangeEventHandler" msprop:Generator_RowDeletedName="TrenesRowDeleted" msprop:Generator_RowClassName="TrenesRow" msprop:Generator_UserTableName="Trenes" msprop:Generator_RowEvArgName="TrenesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Matricula" msprop:Generator_ColumnVarNameInTable="columnMatricula" msprop:Generator_ColumnPropNameInRow="Matricula" msprop:Generator_ColumnPropNameInTable="MatriculaColumn" msprop:Generator_UserColumnName="Matricula">
@@ -2046,7 +2239,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Vagones" msprop:Generator_TableClassName="VagonesDataTable" msprop:Generator_TableVarName="tableVagones" msprop:Generator_TablePropName="Vagones" msprop:Generator_RowDeletingName="VagonesRowDeleting" msprop:Generator_RowChangingName="VagonesRowChanging" msprop:Generator_RowEvHandlerName="VagonesRowChangeEventHandler" msprop:Generator_RowDeletedName="VagonesRowDeleted" msprop:Generator_UserTableName="Vagones" msprop:Generator_RowChangedName="VagonesRowChanged" msprop:Generator_RowEvArgName="VagonesRowChangeEvent" msprop:Generator_RowClassName="VagonesRow">
+        <xs:element name="Vagones" msprop:Generator_TableClassName="VagonesDataTable" msprop:Generator_TableVarName="tableVagones" msprop:Generator_RowChangedName="VagonesRowChanged" msprop:Generator_TablePropName="Vagones" msprop:Generator_RowDeletingName="VagonesRowDeleting" msprop:Generator_RowChangingName="VagonesRowChanging" msprop:Generator_RowEvHandlerName="VagonesRowChangeEventHandler" msprop:Generator_RowDeletedName="VagonesRowDeleted" msprop:Generator_RowClassName="VagonesRow" msprop:Generator_UserTableName="Vagones" msprop:Generator_RowEvArgName="VagonesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Matricula" msprop:Generator_ColumnVarNameInTable="columnMatricula" msprop:Generator_ColumnPropNameInRow="Matricula" msprop:Generator_ColumnPropNameInTable="MatriculaColumn" msprop:Generator_UserColumnName="Matricula">
@@ -2069,7 +2262,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Lineas" msprop:Generator_TableClassName="LineasDataTable" msprop:Generator_TableVarName="tableLineas" msprop:Generator_TablePropName="Lineas" msprop:Generator_RowDeletingName="LineasRowDeleting" msprop:Generator_RowChangingName="LineasRowChanging" msprop:Generator_RowEvHandlerName="LineasRowChangeEventHandler" msprop:Generator_RowDeletedName="LineasRowDeleted" msprop:Generator_UserTableName="Lineas" msprop:Generator_RowChangedName="LineasRowChanged" msprop:Generator_RowEvArgName="LineasRowChangeEvent" msprop:Generator_RowClassName="LineasRow">
+        <xs:element name="Lineas" msprop:Generator_TableClassName="LineasDataTable" msprop:Generator_TableVarName="tableLineas" msprop:Generator_RowChangedName="LineasRowChanged" msprop:Generator_TablePropName="Lineas" msprop:Generator_RowDeletingName="LineasRowDeleting" msprop:Generator_RowChangingName="LineasRowChanging" msprop:Generator_RowEvHandlerName="LineasRowChangeEventHandler" msprop:Generator_RowDeletedName="LineasRowDeleted" msprop:Generator_RowClassName="LineasRow" msprop:Generator_UserTableName="Lineas" msprop:Generator_RowEvArgName="LineasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id">
@@ -2089,7 +2282,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Estacion" msprop:Generator_TableClassName="EstacionDataTable" msprop:Generator_TableVarName="tableEstacion" msprop:Generator_TablePropName="Estacion" msprop:Generator_RowDeletingName="EstacionRowDeleting" msprop:Generator_RowChangingName="EstacionRowChanging" msprop:Generator_RowEvHandlerName="EstacionRowChangeEventHandler" msprop:Generator_RowDeletedName="EstacionRowDeleted" msprop:Generator_UserTableName="Estacion" msprop:Generator_RowChangedName="EstacionRowChanged" msprop:Generator_RowEvArgName="EstacionRowChangeEvent" msprop:Generator_RowClassName="EstacionRow">
+        <xs:element name="Estacion" msprop:Generator_TableClassName="EstacionDataTable" msprop:Generator_TableVarName="tableEstacion" msprop:Generator_RowChangedName="EstacionRowChanged" msprop:Generator_TablePropName="Estacion" msprop:Generator_RowDeletingName="EstacionRowDeleting" msprop:Generator_RowChangingName="EstacionRowChanging" msprop:Generator_RowEvHandlerName="EstacionRowChangeEventHandler" msprop:Generator_RowDeletedName="EstacionRowDeleted" msprop:Generator_RowClassName="EstacionRow" msprop:Generator_UserTableName="Estacion" msprop:Generator_RowEvArgName="EstacionRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id">
@@ -2116,7 +2309,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Incidencias" msprop:Generator_TableClassName="IncidenciasDataTable" msprop:Generator_TableVarName="tableIncidencias" msprop:Generator_RowChangedName="IncidenciasRowChanged" msprop:Generator_TablePropName="Incidencias" msprop:Generator_RowDeletingName="IncidenciasRowDeleting" msprop:Generator_RowChangingName="IncidenciasRowChanging" msprop:Generator_RowEvHandlerName="IncidenciasRowChangeEventHandler" msprop:Generator_RowDeletedName="IncidenciasRowDeleted" msprop:Generator_RowClassName="IncidenciasRow" msprop:Generator_UserTableName="Incidencias" msprop:Generator_RowEvArgName="IncidenciasRowChangeEvent">
+        <xs:element name="Incidencias" msprop:Generator_TableClassName="IncidenciasDataTable" msprop:Generator_TableVarName="tableIncidencias" msprop:Generator_TablePropName="Incidencias" msprop:Generator_RowDeletingName="IncidenciasRowDeleting" msprop:Generator_RowChangingName="IncidenciasRowChanging" msprop:Generator_RowEvHandlerName="IncidenciasRowChangeEventHandler" msprop:Generator_RowDeletedName="IncidenciasRowDeleted" msprop:Generator_UserTableName="Incidencias" msprop:Generator_RowChangedName="IncidenciasRowChanged" msprop:Generator_RowEvArgName="IncidenciasRowChangeEvent" msprop:Generator_RowClassName="IncidenciasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -2153,7 +2346,7 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Tornos" msprop:Generator_TableClassName="TornosDataTable" msprop:Generator_TableVarName="tableTornos" msprop:Generator_RowChangedName="TornosRowChanged" msprop:Generator_TablePropName="Tornos" msprop:Generator_RowDeletingName="TornosRowDeleting" msprop:Generator_RowChangingName="TornosRowChanging" msprop:Generator_RowEvHandlerName="TornosRowChangeEventHandler" msprop:Generator_RowDeletedName="TornosRowDeleted" msprop:Generator_RowClassName="TornosRow" msprop:Generator_UserTableName="Tornos" msprop:Generator_RowEvArgName="TornosRowChangeEvent">
+        <xs:element name="Tornos" msprop:Generator_TableClassName="TornosDataTable" msprop:Generator_TableVarName="tableTornos" msprop:Generator_TablePropName="Tornos" msprop:Generator_RowDeletingName="TornosRowDeleting" msprop:Generator_RowChangingName="TornosRowChanging" msprop:Generator_RowEvHandlerName="TornosRowChangeEventHandler" msprop:Generator_RowDeletedName="TornosRowDeleted" msprop:Generator_UserTableName="Tornos" msprop:Generator_RowChangedName="TornosRowChanged" msprop:Generator_RowEvArgName="TornosRowChangeEvent" msprop:Generator_RowClassName="TornosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -2234,18 +2427,18 @@ SELECT Id, Npe, Nps, Estacion FROM Tornos WHERE (Id = @Id)</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FKdniConduc" msdata:parent="Conductores" msdata:child="Hangar" msdata:parentkey="Dni" msdata:childkey="DniConductor" msprop:Generator_UserChildTable="Hangar" msprop:Generator_ChildPropName="GetHangarRows" msprop:Generator_UserRelationName="FKdniConduc" msprop:Generator_ParentPropName="ConductoresRow" msprop:Generator_RelationVarName="relationFKdniConduc" msprop:Generator_UserParentTable="Conductores" />
-      <msdata:Relationship name="FKDniTecnicoCuidados" msdata:parent="Tecnicos" msdata:child="Cuidados" msdata:parentkey="Dni" msdata:childkey="DniTecnico" msprop:Generator_UserChildTable="Cuidados" msprop:Generator_ChildPropName="GetCuidadosRows" msprop:Generator_UserRelationName="FKDniTecnicoCuidados" msprop:Generator_RelationVarName="relationFKDniTecnicoCuidados" msprop:Generator_UserParentTable="Tecnicos" msprop:Generator_ParentPropName="TecnicosRow" />
-      <msdata:Relationship name="FKMatriculaTrenCuidados" msdata:parent="Trenes" msdata:child="Cuidados" msdata:parentkey="Matricula" msdata:childkey="MatriculaTren" msprop:Generator_UserChildTable="Cuidados" msprop:Generator_ChildPropName="GetCuidadosRows" msprop:Generator_UserRelationName="FKMatriculaTrenCuidados" msprop:Generator_RelationVarName="relationFKMatriculaTrenCuidados" msprop:Generator_UserParentTable="Trenes" msprop:Generator_ParentPropName="TrenesRow" />
-      <msdata:Relationship name="FKMatriculaTren" msdata:parent="Trenes" msdata:child="Hangar" msdata:parentkey="Matricula" msdata:childkey="MatriculaTren" msprop:Generator_UserChildTable="Hangar" msprop:Generator_ChildPropName="GetHangarRows" msprop:Generator_UserRelationName="FKMatriculaTren" msprop:Generator_RelationVarName="relationFKMatriculaTren" msprop:Generator_UserParentTable="Trenes" msprop:Generator_ParentPropName="TrenesRow" />
-      <msdata:Relationship name="FKDniConductorConductores" msdata:parent="Conductores" msdata:child="Trenes" msdata:parentkey="Dni" msdata:childkey="DniConductor" msprop:Generator_UserChildTable="Trenes" msprop:Generator_ChildPropName="GetTrenesRows" msprop:Generator_UserRelationName="FKDniConductorConductores" msprop:Generator_ParentPropName="ConductoresRow" msprop:Generator_RelationVarName="relationFKDniConductorConductores" msprop:Generator_UserParentTable="Conductores" />
-      <msdata:Relationship name="FKMatriculaTrenVagones" msdata:parent="Trenes" msdata:child="Vagones" msdata:parentkey="Matricula" msdata:childkey="MatriculaTren" msprop:Generator_UserChildTable="Vagones" msprop:Generator_ChildPropName="GetVagonesRows" msprop:Generator_UserRelationName="FKMatriculaTrenVagones" msprop:Generator_ParentPropName="TrenesRow" msprop:Generator_RelationVarName="relationFKMatriculaTrenVagones" msprop:Generator_UserParentTable="Trenes" />
-      <msdata:Relationship name="FKIdLinea" msdata:parent="Lineas" msdata:child="Estacion" msdata:parentkey="Id" msdata:childkey="IdLinea" msprop:Generator_UserChildTable="Estacion" msprop:Generator_ChildPropName="GetEstacionRows" msprop:Generator_UserRelationName="FKIdLinea" msprop:Generator_ParentPropName="LineasRow" msprop:Generator_RelationVarName="relationFKIdLinea" msprop:Generator_UserParentTable="Lineas" />
-      <msdata:Relationship name="NominaConductor" msdata:parent="Conductores" msdata:child="Nominas" msdata:parentkey="Dni" msdata:childkey="DniEmpleado" msprop:Generator_UserChildTable="Nominas" msprop:Generator_ChildPropName="GetNominasRows" msprop:Generator_UserRelationName="NominaConductor" msprop:Generator_ParentPropName="ConductoresRow" msprop:Generator_RelationVarName="relationNominaConductor" msprop:Generator_UserParentTable="Conductores" />
-      <msdata:Relationship name="NominaJefe" msdata:parent="JefeEstacion" msdata:child="Nominas" msdata:parentkey="Dni" msdata:childkey="DniEmpleado" msprop:Generator_UserChildTable="Nominas" msprop:Generator_ChildPropName="GetNominasRows" msprop:Generator_UserRelationName="NominaJefe" msprop:Generator_ParentPropName="JefeEstacionRow" msprop:Generator_RelationVarName="relationNominaJefe" msprop:Generator_UserParentTable="JefeEstacion" />
-      <msdata:Relationship name="NominaTecnicos" msdata:parent="Tecnicos" msdata:child="Nominas" msdata:parentkey="Dni" msdata:childkey="DniEmpleado" msprop:Generator_UserChildTable="Nominas" msprop:Generator_ChildPropName="GetNominasRows" msprop:Generator_UserRelationName="NominaTecnicos" msprop:Generator_RelationVarName="relationNominaTecnicos" msprop:Generator_UserParentTable="Tecnicos" msprop:Generator_ParentPropName="TecnicosRow" />
-      <msdata:Relationship name="FKDniJefe" msdata:parent="JefeEstacion" msdata:child="Incidencias" msdata:parentkey="Dni" msdata:childkey="DniJefe" msprop:Generator_UserChildTable="Incidencias" msprop:Generator_ChildPropName="GetIncidenciasRows" msprop:Generator_UserRelationName="FKDniJefe" msprop:Generator_RelationVarName="relationFKDniJefe" msprop:Generator_UserParentTable="JefeEstacion" msprop:Generator_ParentPropName="JefeEstacionRow" />
-      <msdata:Relationship name="FK_Tornos_Estacion" msdata:parent="Estacion" msdata:child="Tornos" msdata:parentkey="Id" msdata:childkey="Estacion" msprop:Generator_UserChildTable="Tornos" msprop:Generator_ChildPropName="GetTornosRows" msprop:Generator_UserRelationName="FK_Tornos_Estacion" msprop:Generator_RelationVarName="relationFK_Tornos_Estacion" msprop:Generator_UserParentTable="Estacion" msprop:Generator_ParentPropName="EstacionRow" />
+      <msdata:Relationship name="FKdniConduc" msdata:parent="Conductores" msdata:child="Hangar" msdata:parentkey="Dni" msdata:childkey="DniConductor" msprop:Generator_UserChildTable="Hangar" msprop:Generator_ChildPropName="GetHangarRows" msprop:Generator_UserRelationName="FKdniConduc" msprop:Generator_RelationVarName="relationFKdniConduc" msprop:Generator_UserParentTable="Conductores" msprop:Generator_ParentPropName="ConductoresRow" />
+      <msdata:Relationship name="FKDniTecnicoCuidados" msdata:parent="Tecnicos" msdata:child="Cuidados" msdata:parentkey="Dni" msdata:childkey="DniTecnico" msprop:Generator_UserChildTable="Cuidados" msprop:Generator_ChildPropName="GetCuidadosRows" msprop:Generator_UserRelationName="FKDniTecnicoCuidados" msprop:Generator_ParentPropName="TecnicosRow" msprop:Generator_RelationVarName="relationFKDniTecnicoCuidados" msprop:Generator_UserParentTable="Tecnicos" />
+      <msdata:Relationship name="FKMatriculaTrenCuidados" msdata:parent="Trenes" msdata:child="Cuidados" msdata:parentkey="Matricula" msdata:childkey="MatriculaTren" msprop:Generator_UserChildTable="Cuidados" msprop:Generator_ChildPropName="GetCuidadosRows" msprop:Generator_UserRelationName="FKMatriculaTrenCuidados" msprop:Generator_ParentPropName="TrenesRow" msprop:Generator_RelationVarName="relationFKMatriculaTrenCuidados" msprop:Generator_UserParentTable="Trenes" />
+      <msdata:Relationship name="FKMatriculaTren" msdata:parent="Trenes" msdata:child="Hangar" msdata:parentkey="Matricula" msdata:childkey="MatriculaTren" msprop:Generator_UserChildTable="Hangar" msprop:Generator_ChildPropName="GetHangarRows" msprop:Generator_UserRelationName="FKMatriculaTren" msprop:Generator_ParentPropName="TrenesRow" msprop:Generator_RelationVarName="relationFKMatriculaTren" msprop:Generator_UserParentTable="Trenes" />
+      <msdata:Relationship name="FKDniConductorConductores" msdata:parent="Conductores" msdata:child="Trenes" msdata:parentkey="Dni" msdata:childkey="DniConductor" msprop:Generator_UserChildTable="Trenes" msprop:Generator_ChildPropName="GetTrenesRows" msprop:Generator_UserRelationName="FKDniConductorConductores" msprop:Generator_RelationVarName="relationFKDniConductorConductores" msprop:Generator_UserParentTable="Conductores" msprop:Generator_ParentPropName="ConductoresRow" />
+      <msdata:Relationship name="FKMatriculaTrenVagones" msdata:parent="Trenes" msdata:child="Vagones" msdata:parentkey="Matricula" msdata:childkey="MatriculaTren" msprop:Generator_UserChildTable="Vagones" msprop:Generator_ChildPropName="GetVagonesRows" msprop:Generator_UserRelationName="FKMatriculaTrenVagones" msprop:Generator_RelationVarName="relationFKMatriculaTrenVagones" msprop:Generator_UserParentTable="Trenes" msprop:Generator_ParentPropName="TrenesRow" />
+      <msdata:Relationship name="FKIdLinea" msdata:parent="Lineas" msdata:child="Estacion" msdata:parentkey="Id" msdata:childkey="IdLinea" msprop:Generator_UserChildTable="Estacion" msprop:Generator_ChildPropName="GetEstacionRows" msprop:Generator_UserRelationName="FKIdLinea" msprop:Generator_RelationVarName="relationFKIdLinea" msprop:Generator_UserParentTable="Lineas" msprop:Generator_ParentPropName="LineasRow" />
+      <msdata:Relationship name="NominaConductor" msdata:parent="Conductores" msdata:child="Nominas" msdata:parentkey="Dni" msdata:childkey="DniEmpleado" msprop:Generator_UserChildTable="Nominas" msprop:Generator_ChildPropName="GetNominasRows" msprop:Generator_UserRelationName="NominaConductor" msprop:Generator_RelationVarName="relationNominaConductor" msprop:Generator_UserParentTable="Conductores" msprop:Generator_ParentPropName="ConductoresRow" />
+      <msdata:Relationship name="NominaJefe" msdata:parent="JefeEstacion" msdata:child="Nominas" msdata:parentkey="Dni" msdata:childkey="DniEmpleado" msprop:Generator_UserChildTable="Nominas" msprop:Generator_ChildPropName="GetNominasRows" msprop:Generator_UserRelationName="NominaJefe" msprop:Generator_RelationVarName="relationNominaJefe" msprop:Generator_UserParentTable="JefeEstacion" msprop:Generator_ParentPropName="JefeEstacionRow" />
+      <msdata:Relationship name="NominaTecnicos" msdata:parent="Tecnicos" msdata:child="Nominas" msdata:parentkey="Dni" msdata:childkey="DniEmpleado" msprop:Generator_UserChildTable="Nominas" msprop:Generator_ChildPropName="GetNominasRows" msprop:Generator_UserRelationName="NominaTecnicos" msprop:Generator_ParentPropName="TecnicosRow" msprop:Generator_RelationVarName="relationNominaTecnicos" msprop:Generator_UserParentTable="Tecnicos" />
+      <msdata:Relationship name="FKDniJefe" msdata:parent="JefeEstacion" msdata:child="Incidencias" msdata:parentkey="Dni" msdata:childkey="DniJefe" msprop:Generator_UserChildTable="Incidencias" msprop:Generator_ChildPropName="GetIncidenciasRows" msprop:Generator_UserRelationName="FKDniJefe" msprop:Generator_ParentPropName="JefeEstacionRow" msprop:Generator_RelationVarName="relationFKDniJefe" msprop:Generator_UserParentTable="JefeEstacion" />
+      <msdata:Relationship name="FK_Tornos_Estacion" msdata:parent="Estacion" msdata:child="Tornos" msdata:parentkey="Id" msdata:childkey="Estacion" msprop:Generator_UserChildTable="Tornos" msprop:Generator_ChildPropName="GetTornosRows" msprop:Generator_UserRelationName="FK_Tornos_Estacion" msprop:Generator_ParentPropName="EstacionRow" msprop:Generator_RelationVarName="relationFK_Tornos_Estacion" msprop:Generator_UserParentTable="Estacion" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -34,3 +34,7 @@ C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMe
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Lineas.resources
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Nominas.resources
 C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Tecnicos.resources
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.csprojResolveAssemblyReference.cache
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Tornos.resources
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Trenes.resources
+C:\Users\alexh\Desktop\GestMetro\GestionMetroc\GestionMetroc\obj\Debug\GestionMetroc.Vagones.resources
